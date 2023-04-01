@@ -1,0 +1,51 @@
+@keyframes onLoadTransition {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.home-container {
+    transition-duration: 0.3s;
+    animation: 1s forwards 0s 1 onLoadTransition;
+}
+
+.button-container {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.home-more {
+    transition: 0.2s;
+}
+.home-more:hover {
+    color: var(--green);
+}
+
+.home-more:hover .arrow-icon {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.arrow-icon {
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+
+

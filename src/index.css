@@ -1,0 +1,35 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --white:#fafafa;
+  --black: #151515;
+  --green: #2ddb83;
+  --blue: #0fa3b1;
+  --yellow: #f2bb05;
+  --orange: #d74e09;
+  --red: #db4c40;
+  --gray: #808782;
+  margin:0px;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  overflow-y: overlay;
+  scrollbar-color: var(--black);
+}
+
+*{
+  margin: 0px;
+}
+
+.h1 {
+  font-size: 3rem;
+}
+
+p {
+  line-height: 3ch;
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,19 @@
+
+.customButton { 
+    color: var(--green);
+    border-radius: 8px;
+    border: 1px var(--green)solid;
+    font-size: large;
+    min-width: 8rem;
+    min-height: 3rem;
+    margin: 5px;
+    transition: 0.1s;
+    background-color: transparent;
+}
+
+.customButton:hover {
+    background: var(--green);
+    border-color: transparent;
+    color: var(--black);
+    cursor: pointer;
+}
