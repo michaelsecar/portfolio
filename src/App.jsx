@@ -2,8 +2,11 @@ import HomePage from './pages/HomePage'
 import HomeMore from './pages/HomeMore'
 import Contact from './pages/Contact'
 import Footer from './pages/Footer'
+import NavigationButton from './components/NavigationButton'
 
 import FiberCanvas from './components/FiberCanvas'
+
+import { useState } from 'react'
 
 import './App.css'
 
@@ -26,6 +29,9 @@ function App() {
       </div>
       <div>
         <FiberCanvas/>
+      </div>
+      <div className="navigation-container">
+        <NavigationButton/>
       </div>
     </div>
   )

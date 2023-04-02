@@ -10,25 +10,37 @@ const FiberCanvas = () => {
             <Canvas>
                 <ambientLight intensity={0.1}/>
                 <directionalLight intensity={0.5} lookAt={[0,0,0]} position={[-5,2,1]}/>
-                <AnimatedCircle/>
+                <Moon/>
+                <Earth/>
            </Canvas>
         </div>
     )
 }
 
-const AnimatedCircle = () => {
-    //Loading texture
+const Moon = () => {
     const moonTexture = useLoader(TextureLoader, 'moon.jpg') 
-
-    // Using useRef and useFrame to animate shape
-    const circleRef = useRef()
+    const moonRef = useRef()
     useFrame(({clock})=> {
-        circleRef.current.rotation.y += 0.001
+        moonRef.current.rotation.y += 0.001
     })
     return (
-        <mesh ref={circleRef} position={[4,2,0]}>
+        <mesh ref={moonRef} position={[4,2,0]}>
             <sphereGeometry/>
             <meshStandardMaterial map={moonTexture}/>
+        </mesh>
+    )
+}
+
+const Earth = ()=> {
+    const earthTexture = useLoader(TextureLoader, 'earth.jpg')
+    const earthRef = useRef()
+    useFrame(({clock})=> {
+        earthRef.current.rotation.y += 0.001
+    })
+    return (
+        <mesh ref={earthRef} position={[3,-4,3]} scale={4}>
+            <sphereGeometry/>
+            <meshStandardMaterial map={earthTexture}/>
         </mesh>
     )
 }

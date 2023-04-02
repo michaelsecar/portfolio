@@ -40,3 +40,14 @@ a {
     flex-direction: column;
     justify-content: center;
 }
+
+.navigation-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+
+}

@@ -11,7 +11,7 @@
     min-width: 30vw;
     display: flex;
     border: 2px var(--green) solid;
-    box-shadow: 0px 0px 15px 1px black;
+    box-shadow: 0px 0px 15px 1px var(--dark-black);
     border-radius: 1rem;
 }
 
@@ -38,5 +38,5 @@
 
 .text-input:focus {
     outline: 0 none;
-    background-color: #2f2f2f;
+    background-color: var(--light-black);
 }
