@@ -1,9 +1,9 @@
 import Button from '../components/Button'
-import { Home, Download, ArrowDown, Info, Desktop} from '../components/Icons'
+import { Home, Download, Info, Desktop} from '../components/Icons'
 
 import './HomePage.css'
 
-const HomePage = ({showMoreCallback}) => {
+const HomePage = () => {
     const downloadCV = () => {
         alert("Se deberia de descargar el CV")
     }
@@ -29,14 +29,6 @@ const HomePage = ({showMoreCallback}) => {
                 Lorem ipsum dolor <span className="green-text">Michael Secarlos AC</span> sit amet consectetur adipisicing elit. Nihil ea cupiditate porro hic perspiciatis est.
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. <span className="green-text">Sistemas</span> Harum, possimus! Reiciendis excepturi nulla voluptates.
                 </p>
-            </div>
-            <div className="home-more">
-                <a className="" href='#section2' onClick={showMoreCallback}>
-                    Ver más
-                    <div className='arrow-icon'>
-                        <ArrowDown/>
-                    </div>
-                </a>
             </div>
             <div className="button-container">
                 <Button value="" action={goHome} icon={<Home/>}/>

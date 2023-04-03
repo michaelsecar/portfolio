@@ -1,23 +1,13 @@
-import { Canvas, useFrame, useLoader} from "@react-three/fiber"
-import { Color, TextureLoader } from "three"
+import { useFrame, useLoader} from "@react-three/fiber"
+import { MathUtils, TextureLoader } from "three"
 import { useRef } from 'react'
 
 import './FiberCanvas.css'
 
-const FiberCanvas = () => {
-    return (
-        <div className="container canvas-container">
-            <Canvas>
-                <ambientLight intensity={0.1}/>
-                <directionalLight intensity={0.5} lookAt={[0,0,0]} position={[-5,2,1]}/>
-                <Moon/>
-                <Earth/>
-           </Canvas>
-        </div>
-    )
-}
-
-const Moon = () => {
+export const Moon = () => {
+    useFrame(({mouse, camera}) => {
+        camera.rotation.y = MathUtils.lerp(camera.rotation.y, mouse.x*0.5, 0.002)
+    })
     const moonTexture = useLoader(TextureLoader, 'moon.jpg') 
     const moonRef = useRef()
     useFrame(({clock})=> {
@@ -31,11 +21,11 @@ const Moon = () => {
     )
 }
 
-const Earth = ()=> {
+export const Earth = ()=> {
     const earthTexture = useLoader(TextureLoader, 'earth.jpg')
     const earthRef = useRef()
     useFrame(({clock})=> {
-        earthRef.current.rotation.y += 0.001
+        earthRef.current.rotation.y += 0.0005
     })
     return (
         <mesh ref={earthRef} position={[3,-4,3]} scale={4}>
@@ -44,5 +34,3 @@ const Earth = ()=> {
         </mesh>
     )
 }
-
-export default FiberCanvas

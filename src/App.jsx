@@ -1,39 +1,25 @@
-import HomePage from './pages/HomePage'
-import HomeMore from './pages/HomeMore'
-import Contact from './pages/Contact'
-import Footer from './pages/Footer'
-import NavigationButton from './components/NavigationButton'
-
-import FiberCanvas from './components/FiberCanvas'
-
-import { useState } from 'react'
-
-import './App.css'
+import { Moon, Earth } from './components/FiberCanvas'
+import { Canvas } from '@react-three/fiber'
+import { Scroll, ScrollControls } from '@react-three/drei'
+import Html from './pages/Html' 
+import { Suspense } from 'react'
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <div id="section1">
-          <HomePage/>
-        </div>
-        <div id="section2">
-          <HomeMore/>
-        </div>
-        <div id="section3">
-          <Contact/>
-        </div>
-        <div id="section4">
-          <Footer/>
-        </div>
-      </div>
-      <div>
-        <FiberCanvas/>
-      </div>
-      <div className="navigation-container">
-        <NavigationButton/>
-      </div>
-    </div>
+      <Canvas camera={[0,0,-10]}>
+        <ambientLight intensity={0.1}/>
+        <directionalLight intensity={0.5} lookAt={[0,0,0]} position={[-5,2,1]}/>
+        <Moon/>
+        <Earth/>
+        <Suspense fallback={null}>
+          <ScrollControls pages={4}>
+            <Scroll html>
+              <Html/>
+            </Scroll>
+          </ScrollControls>
+       </Suspense>
+     </Canvas>
+    
   )
 }
 

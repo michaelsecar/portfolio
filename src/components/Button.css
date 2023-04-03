@@ -8,7 +8,7 @@
     min-height: 3rem;
     margin: 5px;
     transition: 0.1s;
-    background-color: transparent;
+    background-color: #00000011;
 }
 
 .customButton:hover {
