@@ -1,4 +1,5 @@
 import { Moon, Earth } from './components/FiberCanvas'
+import { Particles } from './components/Particles'
 import { Canvas } from '@react-three/fiber'
 import { Scroll, ScrollControls } from '@react-three/drei'
 import Html from './pages/Html' 
@@ -13,6 +14,9 @@ function App() {
         <Earth/>
         <Suspense fallback={null}>
           <ScrollControls pages={4}>
+            <Scroll>
+              <Particles />
+            </Scroll>
             <Scroll html>
               <Html/>
             </Scroll>
