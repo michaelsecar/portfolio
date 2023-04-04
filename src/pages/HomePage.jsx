@@ -1,22 +1,9 @@
 import Button from '../components/Button'
-import { Home, Download, Info, Desktop} from '../components/Icons'
+import { Download, GitHub, LinkedIn, Gmail} from '../components/Icons'
 
 import './HomePage.css'
 
 const HomePage = () => {
-    const downloadCV = () => {
-        alert("Se deberia de descargar el CV")
-    }
-    const goHome = () => {
-        alert("Se deberia de ir al inicio")
-    }
-    const goInfo = () => {
-        alert("Deberia de ir a la informacion de la persona")
-    }
-    const goProjects = () => {
-        alert("Deberia de ir a la seccion de proyectos")
-    }
-
     return ( 
         <div className="container home-container">
             <h1 className="title">
@@ -26,15 +13,15 @@ const HomePage = () => {
             </h1>
             <div className="description">
                 <p className="description-text">
-                Lorem ipsum dolor <span className="green-text">Michael Secarlos AC</span> sit amet consectetur adipisicing elit. Nihil ea cupiditate porro hic perspiciatis est.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. <span className="green-text">Sistemas</span> Harum, possimus! Reiciendis excepturi nulla voluptates.
+                    Estudiante de <span className="green-text">Ingeniería de Sistemas</span> cursando el 9no semestre en la <span className="green-text">Universidad Nacional de San Agustín</span> de Arequipa. 
+                    Con conocimientos adquiridos durante el desarrollo de proyectos implementados en base a las siguientes tecnologías:
                 </p>
             </div>
             <div className="button-container">
-                <Button value="" action={goHome} icon={<Home/>}/>
-                <Button value="" action={goProjects} icon={<Desktop/>}/>
-                <Button value="" action={goInfo} icon={<Info/>}/>
-                <Button value="" action={downloadCV} icon={<Download/>}/>
+                <Button text="GitHub" href="https://github.com/FanFaRoNoObSkY" icon={<GitHub/>}/>
+                <Button text="LinkedIn" href="https://www.linkedin.com/in/michael-secarlos-a99572180/" icon={<LinkedIn/>}/>
+                <Button text="Gmail" href="https://www.linkedin.com/in/michael-secarlos-a99572180/" icon={<Gmail/>}/>
+                <Button text="Currículum" href="#" icon={<Download/>}/>
             </div>
         </div>
     )

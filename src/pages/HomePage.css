@@ -1,28 +1,24 @@
 @keyframes onLoadTransition {
     0%{
-        transform: translateY(-100%);
+        transform: translateY(-10%);
+        filter: blur(10px);
         opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    75% {
-        opacity: 0.5;
     }
     100% {
         transform: translateY(0);
         opacity: 1;
+        filter: blur(1);
     }
 }
 
 .home-container {
     transition-duration: 0.3s;
-    animation: 1s forwards 0s 1 onLoadTransition;
+    animation: 0.4s forwards 0s 1 onLoadTransition;
 }
 
 .button-container {
-    padding: 2rem;
     display: flex;
+    min-width: 70vw;
     gap: 1rem;
 }
 
@@ -46,6 +42,4 @@
     opacity: 0;
     transition: 0.2s;
 }
-
-
 

@@ -1,4 +1,13 @@
 .more-container {
-    transform: translateX(0);
+}
+
+.more-description {
+    display: flex;
+    flex-direction: column;
+
+
+}
+.languages-container {
+    display: flex;
 }
 

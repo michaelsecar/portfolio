@@ -1,19 +1,40 @@
 import './HomeMore.css'
+import { Html5, Css, Js, Java, Cpp, Python, VSCode, GitHub2, Django, React} from '../components/Icons'
 
 const HomeMore = () => {
     return (
         <div className="container more-container">
-            <h1 className="h1 green-text title">
-                <span>Más acerca de mi</span>
+            <h1 className="title">
+                <span className="green-text h1">Acerca de mí</span> y mi stack 
             </h1>                
-            <div className="description">
+            <div className="description more-description">
                 <p className="description-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque modi totam consequatur deleniti dolorum! Quidem.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At inventore sequi rerum dolorem dicta nisi, molestias illum obcaecati voluptas cupiditate distinctio praesentium sunt totam similique quam sit facilis ullam deserunt.
+                    Si bien tengo conocimientos en tecnologias web, también comprendo conceptos avanzados de programación en distintos lenguajes: 
                 </p>
-            </div>
-            <div>
+                <div className="languages-container">
+                    <table>
+                        <tr>
+                            <td>Lenguajes</td>
+                            <td><Html5/></td>
+                            <td><Js/></td>
+                            <td><Css/></td>
+                            <td><Java/></td>
+                            <td><Cpp/></td>
+                            <td><Python/></td>
+                        </tr>
+                        <tr>
+                            <td>Herramientas</td>
+                            <td><VSCode/></td>
+                            <td><GitHub2/></td>
+                        </tr>
+                        <tr>
+                            <td>Frameworks</td>
+                            <td><Django/></td>
+                            <td><React/></td>
+                        </tr>
+                    </table>
 
+                </div>
             </div>
         </div>
     )

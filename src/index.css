@@ -19,7 +19,7 @@
   width: 100vw;
 }
 body {
-  background-color: var(--black);
+  background: linear-gradient(var(--black), var(--dark-black));
   color: var(--white);
 }
 
@@ -27,14 +27,12 @@ body {
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: smaller;
+}
+
 .h1 {
   font-size: 3rem;
-}
-
-p {
-  line-height: 3ch;
-}
-
-html {
-  scroll-behavior: smooth;
 }

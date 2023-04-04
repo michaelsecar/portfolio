@@ -1,13 +1,11 @@
 import { useFrame, useLoader} from "@react-three/fiber"
-import { MathUtils, TextureLoader } from "three"
+import { TextureLoader } from "three"
 import { useRef } from 'react'
 
 import './FiberCanvas.css'
 
 export const Moon = () => {
-    useFrame(({mouse, camera}) => {
-        camera.rotation.y = MathUtils.lerp(camera.rotation.y, mouse.x*0.5, 0.002)
-    })
+    
     const moonTexture = useLoader(TextureLoader, 'moon.jpg') 
     const moonRef = useRef()
     useFrame(({clock})=> {

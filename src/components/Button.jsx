@@ -1,13 +1,10 @@
 import './Button.css'
 
-const Button = ({value, action, icon}) => {
+const Button = ({href, icon, text=""}) => {
     return ( 
-        <button className='customButton' onClick={action}>
-            <span>
-                {value}
-            </span>
-            {icon}
-        </button>
+        <a className='customButton' href={href} target="_blank">
+            <span>{text} </span>{icon}
+        </a>
     )
 }
 

@@ -4,6 +4,7 @@ import Contact from './Contact'
 import Footer from './Footer'
 
 import './Html.css'
+import Projects from './Projects'
 
 const Html = () => {
     return (
@@ -16,9 +17,12 @@ const Html = () => {
                 <HomeMore/>
                 </div>
                 <div id="section3">
-                <Contact/>
+                <Projects/>
                 </div>
                 <div id="section4">
+                <Contact/>
+                </div>
+                <div id="section5">
                 <Footer/>
                 </div>
             </div>

@@ -1,0 +1,30 @@
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 20vw;
+    border-radius: 10px;
+    border: 2px var(--green) solid;
+    transition: 0.2s;
+}
+
+.card-container:hover {
+    transform: scale(1.02);
+    transform: perspective(-300px);
+}
+.card-container:hover .card-image{
+    filter: brightness(1.2);
+}
+
+.card-title {
+    padding: 1rem;
+}
+
+.card-description {
+    padding: 1rem;
+}
+
+.card-image {
+    max-width: 100%;
+    border-radius: 0px 0px 10px 10px ;
+}

@@ -1,0 +1,12 @@
+
+.projects-container {
+
+
+}
+
+.project-cards-container {
+    display: flex;
+    flex-direction: row;
+    min-width: 70vw;
+    justify-content: space-between;
+}

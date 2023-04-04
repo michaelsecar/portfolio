@@ -10,10 +10,12 @@ function App() {
       <Canvas camera={[0,0,-10]}>
         <ambientLight intensity={0.1}/>
         <directionalLight intensity={0.5} lookAt={[0,0,0]} position={[-5,2,1]}/>
-        <Moon/>
-        <Earth/>
-        <Suspense fallback={null}>
-          <ScrollControls pages={4}>
+        {
+          //<Moon/>
+          //<Earth/>
+        }
+       <Suspense fallback={null}>
+          <ScrollControls pages={5}>
             <Scroll>
               <Particles />
             </Scroll>
