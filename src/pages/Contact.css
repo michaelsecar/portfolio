@@ -13,6 +13,7 @@
   border-radius: 10px;
   background-color: transparent;
   backdrop-filter: blur(4px);
+  box-shadow: inset 0px 0px 4px 0px var(--green);
   justify-content: center;
 }
 
