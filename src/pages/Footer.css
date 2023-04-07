@@ -14,12 +14,13 @@
 }
 
 .footer-column {
-    min-width: 50vw;
+    min-width: 40vw;
     padding: 4rem;
 }
 
 .footer-explain {
     padding-top: 1rem;
+    padding-bottom: 1rem;
     color: var(--gray);
 }
 

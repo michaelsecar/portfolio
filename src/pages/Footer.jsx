@@ -1,4 +1,4 @@
-import { Gmail, LinkedIn, Twitter } from "../components/Icons"
+import {  LinkedIn, Twitter, GitHub } from "../components/Icons"
 import "./Footer.css"
 
 const Footer = () => {
@@ -18,22 +18,20 @@ const Footer = () => {
                 </div>
                 <div className="footer-column">
                     <h3 className="green-text">Sociales</h3>
-                    <ul className="footer-list">
-                        <li>Redes</li>
-                        <li>
-                            <a href="#">
-                                <Twitter />
-                            </a>
-                            <a href="#">
-                                <LinkedIn />
-                            </a>
-                            <a href="#">
-                                <Gmail />
-                            </a>
-                        </li>
-                        <li>LinkedIn</li>
-                        <li>Gmail</li>
-                    </ul>
+                    <div className="footer-explain">
+                        Puedes enviarme o conectar de mejor manera conmigo a través de las siguientes redes
+                    </div> 
+                    <div>
+                        <a href="https://twitter.com/michaelsecarlos">
+                            <Twitter />
+                        </a>
+                        <a href="https://www.linkedin.com/in/michael-secarlos-a99572180/">
+                            <LinkedIn />
+                        </a>
+                        <a href="https://github.com/FanFaRoNoObSkY">
+                            <GitHub/>
+                        </a>
+                    </div> 
                 </div>
             </div>
             <div className="footer-message">

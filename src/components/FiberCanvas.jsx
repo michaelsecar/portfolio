@@ -140,7 +140,7 @@ export function Telescope(props) {
         lenRef.current.rotation.y = Math.sin(clock.elapsedTime * 2) * 0.1 + 1.1
     })
     return (
-        <group {...props} dispose={null} scale={0.3} position={[3, -30, 0]}>
+        <group {...props} dispose={null} scale={0.3} position={[3, -29.5, 0]}>
             <mesh
                 castShadow
                 receiveShadow

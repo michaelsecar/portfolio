@@ -1,5 +1,5 @@
 import "./Card.css"
-import { ArrowUp, GitHub } from "../components/Icons"
+import { GitHub } from "../components/Icons"
 
 const Card = ({ title, description, image, alt = "undefined" }) => {
   return (
@@ -7,7 +7,7 @@ const Card = ({ title, description, image, alt = "undefined" }) => {
       <div className="card-header">
         <h3>{title}</h3>
         <div className="card-source">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/FanFaRoNoObSkY" target="_blank" rel="noopener noreferrer">
             <GitHub />
           </a>
         </div>
