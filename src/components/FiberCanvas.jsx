@@ -136,8 +136,8 @@ export function Telescope(props) {
     const baseRef = useRef()
     const lenRef = useRef()
     useFrame(({ clock }) => {
-        baseRef.current.rotation.y = Math.sin(clock.elapsedTime) * 0.4 + 0.2
-        lenRef.current.rotation.y = Math.sin(clock.elapsedTime) * 0.2 + 1.1
+        baseRef.current.rotation.y = Math.sin(clock.elapsedTime) * 0.2 + 0.2
+        lenRef.current.rotation.y = Math.sin(clock.elapsedTime * 2) * 0.1 + 1.1
     })
     return (
         <group {...props} dispose={null} scale={0.3} position={[3, -30, 0]}>

@@ -4,8 +4,37 @@
 
 .footer-info {
     display: flex;
+    flex-direction: row;
     width: 100vw;
-    height: 50vh;
-    border: 1px var(--green) solid;
+    height: 40vh;
     margin-top: 50vh;
+    justify-content: start;
+    border: 1px var(--green) solid;
+    background-color: var(--dark-black);
+}
+
+.footer-column {
+    min-width: 50vw;
+    padding: 4rem;
+}
+
+.footer-explain {
+    padding-top: 1rem;
+    color: var(--gray);
+}
+
+.footer-list {
+    list-style: none;
+    line-height: 2rem;
+}
+
+.footer-line {
+    border: 1px #313131 solid;
+    width: 95vw;
+}
+
+.footer-message {
+    padding-top: 10px;
+    color: var(--gray);
+    font-size: small;
 }
