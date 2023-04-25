@@ -9,22 +9,20 @@ const Projects = () => {
       </h1>
       <div className="description">
         <p className="description-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-          obcaecati hic doloribus, accusantium dolor aspernatur? Culpa dicta
-          distinctio perspiciatis sequi.
+          Si bien no cuento con experiencia real, he trabajado en algunos proyectos personales que listo a continuacion. 
         </p>
       </div>
       <div className="project-cards-container">
         <Card
-          title="Project 1"
-          description="Descripcion del primer proyecto"
-          image="moon.jpg"
-          alt="Texto alternativo"
+          title="En-verb"
+          description="Aplicacion movil creada en react-native"
+          image="enverb.jpg"
+          alt="Screenshot de la aplicacion en-verb"
         />
         <Card
-          title="Project 2"
+          title="ToDoApp"
           description="Descripcion del segundo proyecto"
-          image="moon.jpg"
+          image="todoapp.png"
           alt="Texto alternativo"
         />
         <Card

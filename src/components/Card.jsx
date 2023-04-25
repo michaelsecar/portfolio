@@ -1,5 +1,6 @@
 import "./Card.css"
 import { GitHub } from "../components/Icons"
+import { useState } from "react"
 
 const Card = ({ title, description, image, alt = "undefined" }) => {
   return (
@@ -13,7 +14,9 @@ const Card = ({ title, description, image, alt = "undefined" }) => {
         </div>
       </div>
       <div className="card-description">{description}</div>
-      <img className="card-image" src={image} alt={alt} />
+      <div className="card-image-container">
+        <img className="card-image" src={image} alt={alt}/>
+      </div>
     </div>
   )
 }

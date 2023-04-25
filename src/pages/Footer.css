@@ -39,3 +39,9 @@
     color: var(--gray);
     font-size: small;
 }
+
+.network-data {
+    font-size: 14px;
+    padding: 0.5rem 0px;
+    color: var(--gray);
+}

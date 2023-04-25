@@ -11,31 +11,27 @@ const Footer = () => {
                         <h2>APAZA CALSIN</h2>
                     </div>
                     <div className="footer-explain">
-                        Este portafolio es un resumen sobre mí, mi experiencia
-                        en proyectos en los que participé y evidenciar mis
-                        habilidades en el desarrollo de software.
+                        Este portafolio resume mi conocimiento, experiencia
+                        y habilidades en el desarrollo de software.
                     </div>
                 </div>
                 <div className="footer-column">
                     <h3 className="green-text">Sociales</h3>
                     <div className="footer-explain">
-                        Puedes enviarme o conectar de mejor manera conmigo a través de las siguientes redes
+                        Puedes conectar conmigo a través de las siguientes redes
                     </div> 
                     <div>
-                        <a href="https://twitter.com/michaelsecarlos">
-                            <Twitter />
-                        </a>
-                        <a href="https://www.linkedin.com/in/michael-secarlos-a99572180/">
-                            <LinkedIn />
-                        </a>
-                        <a href="https://github.com/FanFaRoNoObSkY">
-                            <GitHub/>
-                        </a>
+                        <p className="network-data">
+                            Twitter: @michaelsecarlos
+                        </p>
+                        <p className="network-data">
+                            Gmail: michaelsecar@gmail.com
+                        </p>
                     </div> 
                 </div>
             </div>
             <div className="footer-message">
-                Portfolio creado por Michael Secarlos - 2023
+                Portfolio creado por Michael Secarlos - 2023 - michaelsecar@gmail.com
             </div>
         </div>
     )
