@@ -21,7 +21,7 @@ const HomePage = () => {
                 <Button text="GitHub" href="https://github.com/FanFaRoNoObSkY" icon={<GitHub/>}/>
                 <Button text="LinkedIn" href="https://www.linkedin.com/in/michael-secarlos-a99572180/" icon={<LinkedIn/>}/>
                 <Button text="Gmail" href="https://mail.google.com/mail/?view=cm&fs=1&to=michaelsecar@gmail.com" icon={<Gmail/>}/>
-                <Button text="Currículum" href="#" icon={<Download/>}/>
+                <Button text="Currículum" href="CV.pdf" icon={<Download/>} download/>
             </div>
         </div>
     )
