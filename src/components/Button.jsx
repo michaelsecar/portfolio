@@ -1,11 +1,8 @@
-import './Button.css'
 
-const Button = ({href, icon, text=""}) => {
-    return ( 
-        <a className='customButton' href={href} target="_blank">
-            <span>{text} </span>{icon}
-        </a>
+export const Button = ({value, callback}) => {
+    return (
+        <button onClick={callback}>
+            {value}
+        </button>
     )
 }
-
-export default Button
