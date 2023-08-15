@@ -1,4 +1,3 @@
-import './index.css'
 
 import { Navbar } from './components/Navbar'
 import { Home } from './components/Home'
@@ -8,7 +7,7 @@ import { Footer } from './components/Footer'
 
 function App() {
     return (
-        <div className="App flex flex-col items-center">
+        <div className="App flex flex-col bg-gray-800 text-gray-300 w-10/12">
             <header>
                 <Navbar/>
             </header>
