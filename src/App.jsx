@@ -1,28 +1,28 @@
 
-import { Navbar } from './components/Navbar'
-import { Home } from './components/Home'
-import { Projects } from './components/Projects'
-import { Contact } from './components/Contact'
-import { Footer } from './components/Footer'
+import { Navbar } from './components/Navbar/Navbar'
+import { Home } from './components/Home/Home'
+import { Projects } from './components/Projects/Projects'
+import { Contact } from './components/Contact/Contact'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
     return (
-        <div className="App flex flex-col bg-gray-800 text-gray-300 w-10/12">
+        <div className="App flex flex-col text-gray-300">
             <header>
                 <Navbar/>
             </header>
             <main>
-                <section>
+                <section id="home">
                     <Home/>
                 </section>
-                <section>
+                <section id="projects">
                     <Projects/>
                 </section>
-                <section>
+                <section id="contact">
                     <Contact/>
                 </section>
             </main>
-            <footer>
+            <footer id="footer">
                 <Footer/>
             </footer>
         </div>
