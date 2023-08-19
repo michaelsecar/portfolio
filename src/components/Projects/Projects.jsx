@@ -36,8 +36,8 @@ export const Projects = () => {
             <div>
                 <h2 className="text-4xl font-bold text-green-400 py-4">Proyectos</h2>
             </div>
-            <div className="flex md:flex-row flex-col gap-2 w-full h-2/3">
-                <div className="w-7/12 ">
+            <div className="flex md:flex-row flex-col gap-16 w-full h-2/3">
+                <div className="w-1/2 ">
                     <div className="grid grid-cols-3 grid-flow-row gap-2 h-full">
                         {
                             projects.map((e,i) => {
@@ -46,7 +46,7 @@ export const Projects = () => {
                         }
                     </div>
                 </div>
-                <div className="bg-green-900 w-5/12">
+                <div className="bg-green-900 w-1/2">
                     <h2>
                         {projects[selectedProject].title}
                     </h2>

@@ -1,5 +1,5 @@
-import { Button } from '../Button'
-import { HomeIcon } from '../../icons/HomeIcon'
+import { HomeIcon, CVIcon, GitHubIcon, LinkedInIcon} from '../../icons/Icons'
+import { Anchor } from '../Anchor'
 
 export const Home = () => {
     return (
@@ -13,8 +13,9 @@ export const Home = () => {
                    Sint nostrum perferendis modi alias velit delectus? Consequuntur ducimus eum rem, ipsam sint libero corporis quibusdam ipsum aliquam natus fuga expedita. Qui et sequi vitae perferendis alias nisi ipsam voluptas.
                 </p>
                 <div className='flex gap-2'>
-                    <Button value="Ver más" callback={()=>{}} Icon={HomeIcon}/>
-                    <Button value="CV" callback={()=>{}}/>
+                    <Anchor text="LinkedIn" href="https://www.linkedin.com/in/michael-secarlos-a99572180/" Icon={LinkedInIcon}/>
+                    <Anchor text="Github" href="https://github.com/FanFaRoNoObSkY" Icon={GitHubIcon}/>
+                    <Anchor text="Curriculum" href="../../public/CV.pdf"download='' Icon={CVIcon}/>
                 </div>
             </div>
         </div>
