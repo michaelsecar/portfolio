@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { GridElement } from "./GridElement"
+import { Title } from "../Title"
 export const Projects = () => {
 
     const [selectedProject, setSelectedProject] = useState(0)
@@ -33,9 +34,7 @@ export const Projects = () => {
 
     return (
         <div className="h-screen flex container flex-col justify-center">
-            <div>
-                <h2 className="text-4xl font-bold text-green-400 py-4">Proyectos</h2>
-            </div>
+            <Title title="Proyectos" description=""/>
             <div className="flex md:flex-row flex-col gap-16 w-full h-2/3">
                 <div className="w-1/2 ">
                     <div className="grid grid-cols-3 grid-flow-row gap-2 h-full">

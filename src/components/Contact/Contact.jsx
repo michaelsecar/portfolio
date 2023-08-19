@@ -1,16 +1,12 @@
 import { ContactInput } from "./ContactInput"
 import { Button } from '../Button'
 import { MailIcon } from '../../icons/Icons'
+import { Title } from '../Title'
 
 export const Contact = () => {
     return (
-        <div className="container h-screen">
-            <div className="py-10">
-                <h1 className="text-4xl font-bold text-green-400">Contacto</h1>
-                <p className="py-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, vero! Perferendis, tempore!
-                </p>
-            </div>
+        <div className="container h-screen flex flex-col justify-center">
+            <Title title="Contacto" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, vero! Perferendis, tempore!"/>
             <div className="flex gap-16 justify-center">
                 <div className="flex w-1/2 flex-col">
                     <h1 className="text-3xl">
