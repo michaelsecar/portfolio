@@ -4,9 +4,9 @@ import { Title } from "../Title"
 export const Projects = () => {
 
     const projects = [
-        { title: "En-Verb", description: "Aplicacion para aprender los principales verbos irregulares en inglés", image:"public/enverb.png"},
+        { title: "En-Verb", description: "Aplicacion para aprender los principales verbos irregulares en inglés", image:"/enverb.png"},
         { title: "Weather", description: "This is an application to learn english irregular verbs built in React-native", image:""},
-        { title: "Todo List", description: "Aplicacion web para gestionar tareas", image:"public/todoapp.png"},
+        { title: "Todo List", description: "Aplicacion web para gestionar tareas", image:"/todoapp.png"},
         { title: "Animated Portfolio", description: "This is an application to learn english irregular verbs built in React-native", image:""},
         { title: "Animated Portfolio", description: "This is an application to learn english irregular verbs built in React-native", image:""},
         { title: "Animated Portfolio", description: "This is an application to learn english irregular verbs built in React-native", image:""},
