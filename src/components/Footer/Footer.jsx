@@ -1,3 +1,4 @@
+import { MailIcon, GitHubIcon, LinkedInIcon } from '../../icons/Icons'
 
 export const Footer = () => {
     return (
@@ -10,41 +11,24 @@ export const Footer = () => {
                     Este portfolio tiene como fin dar a conocer mi perfil profesional y evidenciar mis avances, experiencia y conocimientos en el desarrollo de software.
                 </p>
             </div>
+
             <div className="flex w-2/12 flex-col [&>ul>li>a]:text-green-400">
+                <h2 className="font-bold text-2xl text-gray-200">Contacto</h2>
                 <ul>
                     <li>
-                        <a href="#home">Inicio</a>
+                        <a className="text-green-400 flex gap-2 items-center" href="https://mail.google.com/mail/?view=cm&fs=1&to=michaelsecar@gmail.com">
+                            <MailIcon/> Gmail
+                        </a>
                     </li>
                     <li>
-                        <a href="#stack">Stack</a>
+                        <a className="text-green-400 flex gap-2 items-center" href="https://github.com/michaelsecar" target="_blank" rel="noopener noreferrer">
+                            <GitHubIcon/> GitHub
+                        </a>
                     </li>
                     <li>
-                        <a href="#projects">Proyectos</a>
-                        </li>
-                    <li>
-                        <a href="#contact">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <div className="flex w-2/12 flex-col">
-                <ul>
-                    <li>Proyecto 1</li>
-                    <li>Proyecto 2</li>
-                    <li>Proyecto 3</li>
-                    <li>Proyecto 4</li>
-                    <li>Proyecto 5</li>
-                </ul> 
-            </div>
-            <div className="flex w-2/12 flex-col [&>ul>li>a]:text-green-400">
-                <ul>
-                    <li>
-                        <a href="https://twitter.com/michaelsecarlos">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/FanFaRoNoObSkY">GitHub</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/michael-secarlos-a99572180/">LinkedIn</a>
+                        <a className="text-green-400 flex gap-2 items-center" href="https://www.linkedin.com/in/michael-secarlos-a99572180/" target="_blank" rel="noopener noreferrer">
+                            <LinkedInIcon/> LinkedIn
+                        </a>
                     </li>
                 </ul>
             </div>

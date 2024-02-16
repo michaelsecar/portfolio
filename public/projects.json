@@ -1,0 +1,23 @@
+[
+    {
+        "title": "En-Verb",
+        "description": "Aplicación móvil desarrollada para el aprendizaje de los principales verbos irregulares del lenguaje inglés.",
+        "image":"/enverb.png",
+        "repository": "https://github.com/michaelsecar/en-verb",
+        "technologies": ["typescript", "react-native"]
+    },
+    { 
+        "title": "Plataforma académica", 
+        "description": "Plataforma para la gestión administrativa y académica de los procesos de negocio de la institución educativa Reich la Perla.", 
+        "image":"/reich.png",
+        "repository": "https://gitlab.com/frego100/pisw_2023_reich_colegio",
+        "technologies": ["python", "typescript", "sql", "django", "react"]
+    },
+    { 
+        "title": "Chat RSS",
+        "description": "Aplicación de escritorio creada utilizando tecnologías web para hacer uso de ChatGPT en el escritorio.",
+        "image":"/chatrss.png",
+        "repository": "https://github.com/michaelsecar/chat-rss",
+        "technologies": ["javascript", "electron", "firebase", "chat-gpt"]
+    }
+]

@@ -1,24 +1,48 @@
+import { Chip } from "../Utils/Chip"
+import { GitIcon } from "../../icons/Icons"
 
-export const GridElement = ({title, description, img=undefined, callback, identifier, image="#"}) => {
+export const GridElement = ({title, description, img=undefined, image="#", repository, technologies=[]}) => {
     return (
         <div 
-            className="rounded-md backdrop-blur-sm border-2 border-gray-600 duration-75 opacity-90  overflow-hidden
-            shadow-gray-600/10 shadow-lg
-            hover:opacity-100 hover:shadow-green-600/10 hover:border-green-600
+            className="
+            flex flex-col
+            rounded-md backdrop-blur-sm border-2 border-gray-600 duration-75 opacity-90 overflow-hidden
+            drop-shadow-[0_0_10px_rgba(120,120,120,0.3)] 
+            hover:opacity-100 hover:border-green-600 hover:drop-shadow-[0_0_10px_rgba(0,230,0,0.3)]
             [&>img]:hover:opacity-100
-            [&>div>h2]:hover:text-green-400
+             [&>div>h2]:hover:text-green-400
             "
-            onClick={()=>callback(identifier)}
         >
-            <div className="p-3 opacity-90 duration-100 bg-black backdrop-blur-lg">
-                <h2 className="text-xl font-bold text-center">
-                    {title}
-                </h2>
-                <p className="text-gray-300 text-sm">
-                    {description}
-                </p>
+            <div>
+                <div className="p-3 opacity-90 duration-100 bg-black backdrop-blur-lg">
+                    <div className="flex justify-between">
+                        <h2 className="text-xl font-bold">
+                            {title}
+                        </h2>
+                        <div>
+                            <a className="
+                                flex rounded-full border-2 p-1 
+                                hover:border-green-400 hover:text-green-400"
+                                href={repository} target="_blank" rel="noopener noreferrer"
+                            >
+                                <GitIcon/>
+                            </a>
+                        </div>
+                    </div>
+                    <hr className="my-2 border-gray-600"/>
+                   <p className="text-gray-300 text-sm h-16">
+                        {description}
+                    </p>
+                </div>
+                <img src={image} alt="Project image" className="-z-10 opacity-70"/>
             </div>
-           <img src={image} alt="Project image" className="fixed top-0 left-0 -z-10 opacity-70"/>
-        </div>
+            <div className="p-2 m-1 h-full text-center">
+                {
+                    technologies.map((e,i)=>{
+                        return <Chip key={i} text={e}/>
+                    })
+                }
+            </div>
+       </div>
     )
 }

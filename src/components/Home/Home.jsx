@@ -1,5 +1,5 @@
 import { HomeIcon, CVIcon, GitHubIcon, LinkedInIcon} from '../../icons/Icons'
-import { Anchor } from '../Anchor'
+import { Anchor } from '../Utils/Anchor'
 
 export const Home = () => {
     return (
@@ -10,12 +10,13 @@ export const Home = () => {
                     <h2 className="text-4xl text-green-500">Desarrollador Fullstack</h2>
                 </div>
                 <p className="text-lg py-5">
-                   Sint nostrum perferendis modi alias velit delectus? Consequuntur ducimus eum rem, ipsam sint libero corporis quibusdam ipsum aliquam natus fuga expedita. Qui et sequi vitae perferendis alias nisi ipsam voluptas.
+                    Egresado de la carrera de <span className="text-green-500 font-bold">Ingenieria de Sistemas</span> de la Universidad Nacional de San Agustín de Arequipa. Con conocimientos en desarrollo web tanto para el <span className='text-green-400'>frontend</span> y <span className='text-green-400'>backend</span>.
+                    A pesar de esto, estoy abierto a nuevas oportunidades y experiencias en el mundo de la tecnología.
                 </p>
                 <div className='flex gap-2'>
-                    <Anchor text="LinkedIn" href="https://www.linkedin.com/in/michael-secarlos-a99572180/" Icon={LinkedInIcon}/>
-                    <Anchor text="Github" href="https://github.com/FanFaRoNoObSkY" Icon={GitHubIcon}/>
-                    <Anchor text="Curriculum" href="../../public/CV.pdf"download='' Icon={CVIcon}/>
+                    <Anchor text="LinkedIn" href="https://www.linkedin.com/in/michael-apaza-calsin-a99572180/" Icon={LinkedInIcon} rel="noopener noreferrer" target="_blank"/>
+                    <Anchor text="Github" href="https://github.com/michaelsecar/" Icon={GitHubIcon} rel="noopener noreferrer" target="_blank"/>
+                    <Anchor text="Curriculum" href="/CV.pdf"download='' Icon={CVIcon}/>
                 </div>
             </div>
         </div>

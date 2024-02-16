@@ -1,5 +1,5 @@
 import { CppIcon, CssIcon, DjangoIcon, HtmlIcon, JavaIcon, JavascriptIcon, NodeIcon, PythonIcon, ReactIcon } from '../../icons/StackIcons'
-import { Title } from '../Title'
+import { Title } from '../Utils/Title'
 import { StackItem } from './StackItem'
 
 export const Stack = () => {
@@ -17,7 +17,7 @@ export const Stack = () => {
 
     return (
         <div className="container h-screen pt-8">
-            <Title title="Stack" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi officiis eum!"/>
+            <Title title="Stack" description="Estas son las tecnologías que manejo actualmente."/>
             <div className='grid grid-cols-3 place-items-center gap-10'>
                 {
                     items.map((e,i)=>{
