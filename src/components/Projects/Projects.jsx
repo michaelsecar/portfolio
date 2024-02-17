@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import { getProjects } from "../../services/Projects.service"
 
 export const Projects = () => {
-
     const [projects, setProjects] = useState([])
 
     useEffect(()=>{
@@ -12,14 +11,13 @@ export const Projects = () => {
         .then(data=>{
             setProjects(data)
         })
-    },[])
+    }, [])
    
-
     return (
-        <div className="h-screen container pt-8">
+        <div className="h-fit container pt-8">
             <Title title="Proyectos" description="Mención de los proyectos en los que he trabajado anteriormente"/>
             <div className="flex h-2/3">
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-3 grid-cols-1">
                     {
                         projects.map((e,i) => {
                             return <GridElement 

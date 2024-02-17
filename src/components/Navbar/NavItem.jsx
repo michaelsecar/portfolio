@@ -4,11 +4,11 @@ export const NavItem = ({text, href, Icon=undefined, isCurrent=false}) => {
             <a href={href} className={`
                 text-md p-4 gap-2 border-b-2 border-transparent duration-100
                 flex items-center justify-center 
-                text-gray-200 hover:text-gray-400 hover:border-b-gray-400 w-32
+                text-gray-200 hover:text-gray-400 hover:border-b-gray-400 w-20 md:w-32
                 ${isCurrent?'text-green-400 border-b-green-400' :''}`}
             >
                 {Icon?<Icon/>:<></>}
-                {text}
+                <span className="md:inline hidden">{text}</span>
             </a>
     )
 }

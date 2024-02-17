@@ -8,7 +8,7 @@
     },
     { 
         "title": "Plataforma académica", 
-        "description": "Plataforma para la gestión administrativa y académica de los procesos de negocio de la institución educativa Reich la Perla.", 
+        "description": "Plataforma para la gestión administrativa y académica para la institución educativa Reich la Perla.", 
         "image":"/reich.png",
         "repository": "https://gitlab.com/frego100/pisw_2023_reich_colegio",
         "technologies": ["python", "typescript", "sql", "django", "react"]

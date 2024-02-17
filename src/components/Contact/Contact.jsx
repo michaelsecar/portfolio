@@ -16,10 +16,10 @@ export const Contact = () => {
     }
     
     return (
-        <div className="container h-screen pt-8">
+        <div className="container h-fit pt-8">
             <Title title="Contacto" description="Resuelva sus dudas y consultas acerca de mí a través de un mensaje."/>
-            <div className="flex gap-16 justify-center">
-                <div className="flex w-3/5 flex-col justify-center gap-3">
+            <div className="md:flex gap-16 justify-center">
+                <div className="hidden md:flex md:w-3/5 md:visible flex-col justify-center gap-3">
                     <h2 className="font-bold text-green-400 text-3xl">¿Quieres comunicarte conmigo?</h2>
                     <p className='text-gray-200 text-2xl'>
                         Por favor, completa el siguiente formulario para contactarme
@@ -29,13 +29,13 @@ export const Contact = () => {
                     </p>
                     <p className='text-green-400 font-bold text-2xl'>Gracias</p>
                 </div>
-                <div className="flex w-2/5">
+                <div className="flex md:w-2/5">
                     <form action="#" method="get" className="w-full rounded-md">
                         <TextInput input="Asunto" callback={setAsunto}/>
                         <TextInput input="Nombre" callback={setNombre}/>
                         <TextInput input="Empresa" callback={setEmpresa}/>
                         <TextInput input="Mensaje" callback={setMensaje}/>
-                        <p className="py-4 text-gray-500 size-sm">El mensaje sera enviado por Gmail.</p>
+                        <p className="py-4 text-gray-500 size-sm">El mensaje sera enviado por Gmail al correo: michaelsecar@gmail.com.</p>
                         <div className="flex">
                             <Anchor text="Enviar mensaje" Icon={MailIcon} href={`https://mail.google.com/mail/?view=cm&fs=1&to=michaelsecar@gmail.com&su=${asunto}+-+${empresa}&body=De+${nombre}.+${mensaje}`}/>
                         </div>

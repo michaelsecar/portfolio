@@ -19,6 +19,5 @@ export const Navbar = ({currentSection=0}) => {
                 </li>
             </ul>
         </div>
-
     )
 }

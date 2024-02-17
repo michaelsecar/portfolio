@@ -16,7 +16,7 @@ export const Stack = () => {
     ]
 
     return (
-        <div className="container h-screen pt-8">
+        <div className="container h-fit pt-8">
             <Title title="Stack" description="Estas son las tecnologías que manejo actualmente."/>
             <div className='grid grid-cols-3 place-items-center gap-10'>
                 {

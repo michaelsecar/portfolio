@@ -9,8 +9,7 @@ export const GridElement = ({title, description, img=undefined, image="#", repos
             rounded-md backdrop-blur-sm border-2 border-gray-600 duration-75 opacity-90 overflow-hidden
             drop-shadow-[0_0_10px_rgba(120,120,120,0.3)] 
             hover:opacity-100 hover:border-green-600 hover:drop-shadow-[0_0_10px_rgba(0,230,0,0.3)]
-            [&>img]:hover:opacity-100
-             [&>div>h2]:hover:text-green-400
+            [&>div>h2]:hover:text-green-400
             "
         >
             <div>
@@ -30,7 +29,7 @@ export const GridElement = ({title, description, img=undefined, image="#", repos
                         </div>
                     </div>
                     <hr className="my-2 border-gray-600"/>
-                   <p className="text-gray-300 text-sm h-16">
+                   <p className="text-gray-300 text-sm">
                         {description}
                     </p>
                 </div>
