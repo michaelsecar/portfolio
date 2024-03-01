@@ -7,7 +7,6 @@ export const GridElement = ({title, description, img=undefined, image="#", repos
             className="
             flex flex-col
             rounded-md backdrop-blur-sm border-2 border-gray-600 duration-75 opacity-90 overflow-hidden
-            drop-shadow-[0_0_10px_rgba(120,120,120,0.3)] 
             hover:opacity-100 hover:border-green-600 hover:drop-shadow-[0_0_10px_rgba(0,230,0,0.3)]
             [&>div>h2]:hover:text-green-400
             "

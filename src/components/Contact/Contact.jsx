@@ -3,6 +3,7 @@ import { Anchor } from '../Utils/Anchor'
 import { Title } from '../Utils/Title'
 import { TextInput } from "../Utils/TextInput"
 import { MailIcon } from '../../icons/Icons'
+import { Copy2Clipboard } from '../../icons/Icons'
 
 export const Contact = () => {
     const [asunto, setAsunto] = useState("")
@@ -10,19 +11,27 @@ export const Contact = () => {
     const [empresa, setEmpresa] = useState("")
     const [mensaje, setMensaje] = useState("")
 
-    const handler = (event) => {
-        console.log(event.targe.value)
-        setAsunto(event.target.value)
+    const [filled, setFilled] = useState(false)
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText("michaelsecar@gmail.com")
+        setFilled(true)
+        setTimeout(()=>setFilled(false), 2000)
     }
-    
+
     return (
         <div className="container h-fit pt-8">
             <Title title="Contacto" description="Resuelva sus dudas y consultas acerca de mí a través de un mensaje."/>
             <div className="md:flex gap-16 justify-center">
                 <div className="hidden md:flex md:w-3/5 md:visible flex-col justify-center gap-3">
                     <h2 className="font-bold text-green-400 text-3xl">¿Quieres comunicarte conmigo?</h2>
-                    <p className='text-gray-200 text-2xl'>
-                        Por favor, completa el siguiente formulario para contactarme
+                    <p className='text-gray-200 text-xl'>
+                        Completa el formulario o envíame un correo a: 
+                        <button onClick={copyToClipboard} className="flex text-green-400 font-bold items-center">
+                            {
+                                filled?
+                                <span className="animate-pulse">¡Copiado al portapapeles!</span>:"michaelsecar@gmail.com"
+                            }<Copy2Clipboard filled={filled}/>
+                        </button>
                     </p>
                     <p className="text-lg text-gray-400">
                         Responderé lo antes posible, no dude en realizar su consulta y espere una pronta respuesta. 

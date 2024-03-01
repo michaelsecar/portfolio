@@ -17,7 +17,7 @@ export const Footer = () => {
                 <ul>
                     <li className='flex'>
                         <a className="text-green-400 flex gap-2 items-center" href="https://mail.google.com/mail/?view=cm&fs=1&to=michaelsecar@gmail.com">
-                            <MailIcon/> Gmail
+                            <MailIcon/> michaelsecar@gmail.com
                         </a>
                     </li>
                     <li className='flex'>
