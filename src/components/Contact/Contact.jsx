@@ -23,20 +23,20 @@ export const Contact = () => {
             <Title title="Contacto" description="Resuelva sus dudas y consultas acerca de mí a través de un mensaje."/>
             <div className="md:flex gap-16 justify-center">
                 <div className="hidden md:flex md:w-3/5 md:visible flex-col justify-center gap-3">
-                    <h2 className="font-bold text-green-400 text-3xl">¿Quieres comunicarte conmigo?</h2>
-                    <p className='text-gray-200 text-xl'>
+                    <h2 className="font-bold text-green-600 dark:text-green-400 text-3xl">¿Quieres comunicarte conmigo?</h2>
+                    <p className='dark:text-gray-200 text-xl text-gray-600'>
                         Completa el formulario o envíame un correo a: 
-                        <button onClick={copyToClipboard} className="flex text-green-400 font-bold items-center">
+                        <button onClick={copyToClipboard} className="flex dark:text-green-400 text-green-600 font-bold items-center">
                             {
                                 filled?
                                 <span className="animate-pulse">¡Copiado al portapapeles!</span>:"michaelsecar@gmail.com"
                             }<Copy2Clipboard filled={filled}/>
                         </button>
                     </p>
-                    <p className="text-lg text-gray-400">
+                    <p className="text-lg text-gray-500 dark:text-gray-400">
                         Responderé lo antes posible, no dude en realizar su consulta y espere una pronta respuesta. 
                     </p>
-                    <p className='text-green-400 font-bold text-2xl'>Gracias</p>
+                    <p className='dark:text-green-400 text-green-600 font-bold text-2xl'>Gracias</p>
                 </div>
                 <div className="flex md:w-2/5">
                     <form action="#" method="get" className="w-full rounded-md">

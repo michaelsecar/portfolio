@@ -29,7 +29,7 @@ function App() {
     },[])
 
     return (
-        <div className="App flex flex-col text-gray-300">
+        <div className="App flex flex-col text-gray-900 dark:text-gray-300">
             <header>
                 <Navbar currentSection={currentSection}/>
             </header>
