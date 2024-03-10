@@ -19,7 +19,7 @@ export const Navbar = ({currentSection=0}) => {
                     <NavItem text="Contacto" href="#contact" Icon={MessageIcon} isCurrent={currentSection===3}/>
                 </li>
             </ul>
-            <div className="absolute right-20 top-3">
+            <div className="absolute right-3 sm:right-16 md:right-8 top-2 sm:top-3">
                 <ToogleMode/>
             </div>
         </div>
