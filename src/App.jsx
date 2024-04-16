@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 import { Navbar } from './components/Navbar/Navbar'
 import { Home } from './components/Home/Home'
 import { Projects } from './components/Projects/Projects'
@@ -6,14 +8,15 @@ import { Footer } from './components/Footer/Footer'
 import { Stack } from './components/Stack/Stack'
 import { Menu } from './components/Menu/Menu'
 
-import { useState } from 'react'
-import { useEffect } from 'react'
-
 function App() {
     const [currentSection, setCurrentSection] = useState(0)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light')
-    const [language, setLanguage] = useState(localStorage.getItem('language') ?? navigator.language.substring(0,2) ?? 'en')
+    const [language, setLanguage] = useState(()=> {
+        const lang = localStorage.getItem('language') ?? navigator.language.substring(0,2) ?? 'en'
+        localStorage.setItem('language', lang)
+        return lang
+    })
 
     const updateTheme = (currentTheme) => {
         if (currentTheme === 'light' || currentTheme === null) {
@@ -58,7 +61,7 @@ function App() {
         return ()=>{
             window.removeEventListener('scroll', handleScroll)
         }
-    },[theme])
+    },[theme, language])
 
     return (
         <div className="App flex flex-col text-gray-900 dark:text-gray-300">

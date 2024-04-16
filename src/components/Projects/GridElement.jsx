@@ -1,12 +1,12 @@
 import { Chip } from "../Utils/Chip"
 import { GitIcon } from "../../icons/Icons"
 
-export const GridElement = ({title, description, img=undefined, image="#", repository, technologies=[]}) => {
+export const GridElement = ({title, description, image="#", repository, technologies=[]}) => {
     return (
         <div 
             className="
             flex flex-col
-            rounded-md backdrop-blur-sm border-2 border-gray-600 duration-75 opacity-90 overflow-hidden
+            rounded-md border-2 border-gray-600 duration-75 opacity-90 overflow-hidden
             hover:opacity-100 hover:border-green-600 hover:drop-shadow-[0_0_10px_rgba(0,230,0,0.3)]
             bg-gray-50
             dark:bg-black

@@ -5,6 +5,8 @@ import { Moon } from '../../icons/Moon'
 import { LanguageDropDown } from './Dropdown'
 
 export const Menu = ({menuCallback, theme, themeCallback, language, languageCallback}) => {
+    const lang = localStorage.getItem('language')
+
     return (
         <div className="fixed min-w-[300px] h-screen
             left-0 z-40
@@ -19,7 +21,9 @@ export const Menu = ({menuCallback, theme, themeCallback, language, languageCall
                     </button>
                 </div>
                 <div className="flex flex-col gap-5">
-                    <MenuItem item="Tema" Icon={theme==='light'?Sun:Moon} callback={themeCallback}/>
+                    <MenuItem
+                        item={lang==="en"?"Theme":"Tema"}
+                        Icon={theme==='light'?Sun:Moon} callback={themeCallback}/>
                     <LanguageDropDown
                         currentLanguage={language}
                         onChange={languageCallback}

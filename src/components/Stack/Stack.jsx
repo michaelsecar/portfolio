@@ -3,6 +3,8 @@ import { Title } from '../Utils/Title'
 import { StackItem } from './StackItem'
 
 export const Stack = () => {
+    const lang = localStorage.getItem('language')
+
     const items = [
         { name: "Django", icon: DjangoIcon },
         { name: "React", icon: ReactIcon },
@@ -17,7 +19,10 @@ export const Stack = () => {
 
     return (
         <div className="container h-fit pt-8">
-            <Title title="Stack" description="Estas son las tecnologías que manejo actualmente."/>
+            <Title 
+                title="Stack" 
+                description={lang==="en"?"Current technologies that I use":"Estas son las tecnologías que manejo actualmente."}
+            />
             <div className='grid grid-cols-3 place-items-center gap-10'>
                 {
                     items.map((e,i)=>{
