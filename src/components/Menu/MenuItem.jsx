@@ -13,7 +13,7 @@ export const MenuItem = ({item, Icon=undefined, callback=undefined}) => {
             duration-100
             '
         >
-            <span className="">{item}</span>
+            <span>{item}</span>
             {Icon?<Icon/>:<></>}
         </button>
     )

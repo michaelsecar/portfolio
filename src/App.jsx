@@ -4,7 +4,7 @@ import { Projects } from './components/Projects/Projects'
 import { Contact } from './components/Contact/Contact'
 import { Footer } from './components/Footer/Footer'
 import { Stack } from './components/Stack/Stack'
-import { Menu } from './components/Navbar/Menu'
+import { Menu } from './components/Menu/Menu'
 
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -13,6 +13,7 @@ function App() {
     const [currentSection, setCurrentSection] = useState(0)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light')
+    const [language, setLanguage] = useState(localStorage.getItem('language') ?? navigator.language.substring(0,2) ?? 'en')
 
     const updateTheme = (currentTheme) => {
         if (currentTheme === 'light' || currentTheme === null) {
@@ -20,6 +21,10 @@ function App() {
         } else {
             document.documentElement.classList.remove('dark')
         }
+    }
+    const updateLanguage = (selectedLanguage) => {
+        setLanguage(selectedLanguage)
+        localStorage.setItem('language', selectedLanguage)
     }
 
     const toggleTheme = () => {
@@ -64,6 +69,8 @@ function App() {
                         menuCallback={()=>toggleMenu()}
                         theme={theme}
                         themeCallback={()=>toggleTheme()}
+                        language={language}
+                        languageCallback={updateLanguage}
                     />
                 }
             </header>
