@@ -1,4 +1,4 @@
-import { HomeIcon, CVIcon, GitHubIcon, LinkedInIcon} from '../../icons/Icons'
+import { CVIcon, GitHubIcon, LinkedInIcon} from '../../icons/Icons'
 import { Anchor } from '../Utils/Anchor'
 
 export const Home = () => {

@@ -1,10 +1,17 @@
 import { NavItem } from "./NavItem"
 import { HomeIcon, MessageIcon, ProjectIcon, ToolsIcon } from '../../icons/Icons'
-import { ToogleMode } from "../Utils/ToogleMode"
+import { MenuIcon } from "../../icons/Menu"
 
-export const Navbar = ({currentSection=0}) => {
+export const Navbar = ({currentSection=0, menuOpenCallback=undefined}) => {
+
     return (
-        <div className="fixed w-screen left-0 bg-opacity-80 backdrop-blur-lg z-10 bg-stone-100 dark:bg-black">
+        <div className="fixed w-screen left-0 bg-opacity-80 backdrop-blur-lg z-10 bg-stone-100 dark:bg-black
+            flex items-center justify-between px-10
+        ">
+            <button onClick={() => menuOpenCallback()}>
+                <MenuIcon/>
+            </button>
+
             <ul className="flex justify-center">
                 <li>
                     <NavItem text="Inicio" href="#home" Icon={HomeIcon} isCurrent={currentSection===0}/>
@@ -19,9 +26,8 @@ export const Navbar = ({currentSection=0}) => {
                     <NavItem text="Contacto" href="#contact" Icon={MessageIcon} isCurrent={currentSection===3}/>
                 </li>
             </ul>
-            <div className="absolute right-3 sm:right-16 md:right-8 top-2 sm:top-3">
-                <ToogleMode/>
-            </div>
+
+            <div></div>
         </div>
     )
 }

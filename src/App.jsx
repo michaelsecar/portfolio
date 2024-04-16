@@ -4,12 +4,30 @@ import { Projects } from './components/Projects/Projects'
 import { Contact } from './components/Contact/Contact'
 import { Footer } from './components/Footer/Footer'
 import { Stack } from './components/Stack/Stack'
+import { Menu } from './components/Navbar/Menu'
 
 import { useState } from 'react'
 import { useEffect } from 'react'
 
 function App() {
     const [currentSection, setCurrentSection] = useState(0)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light')
+
+    const updateTheme = (currentTheme) => {
+        if (currentTheme === 'light' || currentTheme === null) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    }
+
+    const toggleTheme = () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light'
+        // Setting local storage and state
+        localStorage.setItem('theme', newTheme)
+        setTheme(newTheme)
+    }
 
     const handleScroll = () => {
         const sections = document.querySelectorAll('section')
@@ -20,18 +38,34 @@ function App() {
             }
         })
     }
-    useEffect(()=>{
-        window.addEventListener('scroll', handleScroll)
 
+    const toggleMenu= () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
+
+    useEffect(()=>{
+        // Theme
+        const currentTheme = localStorage.getItem('theme')
+        updateTheme(currentTheme)
+
+        // Scroll
+        window.addEventListener('scroll', handleScroll)
         return ()=>{
             window.removeEventListener('scroll', handleScroll)
         }
-    },[])
+    },[theme])
 
     return (
         <div className="App flex flex-col text-gray-900 dark:text-gray-300">
             <header>
-                <Navbar currentSection={currentSection}/>
+                <Navbar currentSection={currentSection} menuOpenCallback={toggleMenu}/>
+                { 
+                    isMenuOpen && <Menu  
+                        menuCallback={()=>toggleMenu()}
+                        theme={theme}
+                        themeCallback={()=>toggleTheme()}
+                    />
+                }
             </header>
             <main>
                 <section id="home">
