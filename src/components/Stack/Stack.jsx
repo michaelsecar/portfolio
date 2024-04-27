@@ -1,9 +1,11 @@
+import { useContext } from 'react'
 import { CppIcon, CssIcon, DjangoIcon, HtmlIcon, JavaIcon, JavascriptIcon, NodeIcon, PythonIcon, ReactIcon } from '../../icons/StackIcons'
 import { Title } from '../Utils/Title'
 import { StackItem } from './StackItem'
+import { LanguageContext } from '../../providers/LanguageProvider'
 
 export const Stack = () => {
-    const lang = localStorage.getItem('language')
+    const { language }= useContext(LanguageContext)
 
     const items = [
         { name: "Django", icon: DjangoIcon },
@@ -21,7 +23,7 @@ export const Stack = () => {
         <div className="container h-fit pt-8">
             <Title 
                 title="Stack" 
-                description={lang==="en"?"Current technologies that I use":"Estas son las tecnologías que manejo actualmente."}
+                description={language==="en"?"Current technologies that I use":"Estas son las tecnologías que manejo actualmente."}
             />
             <div className='grid grid-cols-3 place-items-center gap-10'>
                 {

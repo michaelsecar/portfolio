@@ -1,29 +1,36 @@
 import { NavItem } from "./NavItem"
-import { HomeIcon, MessageIcon, ProjectIcon, ToolsIcon } from '../../icons/Icons'
-import { MenuIcon } from "../../icons/Menu"
+import { MenuIcon, HomeIcon, MessageIcon, ProjectIcon, ToolsIcon } from '../../icons/Icons'
 
-export const Navbar = ({currentSection=0, menuOpenCallback=undefined}) => {
-    const lang = localStorage.getItem('language')
+import { useContext } from 'react'
+
+import { MenuContext } from '../../providers/MenuProvider'
+import { LanguageContext } from '../../providers/LanguageProvider'
+import { SectionContext } from '../../providers/SectionProvider'
+
+export const Navbar = () => {
+    const { language }= useContext(LanguageContext)
+    const { currentSection } = useContext(SectionContext)
+    const menu = useContext(MenuContext)
 
     return (
         <div className="fixed w-screen left-0 bg-opacity-80 backdrop-blur-lg z-10 bg-stone-100 dark:bg-black
             flex items-center justify-between px-10
         ">
-            <button onClick={() => menuOpenCallback()}>
+            <button onClick={menu.toggle}>
                 <MenuIcon/>
             </button>
 
             <ul className="flex justify-center">
                 <li>
                     <NavItem
-                        text={lang==="en"?"Home":"Inicio"}
+                        text={language==="en"?"Home":"Inicio"}
                         href="#home" Icon={HomeIcon}
                         isCurrent={currentSection===0}
                     />
                 </li>
                 <li>
                     <NavItem
-                        text={lang==="en"?"Projects":"Proyectos"}
+                        text={language==="en"?"Projects":"Proyectos"}
                         href="#projects"
                         Icon={ProjectIcon}
                         isCurrent={currentSection===1}
@@ -34,7 +41,7 @@ export const Navbar = ({currentSection=0, menuOpenCallback=undefined}) => {
                 </li>
                 <li>
                     <NavItem
-                        text={lang==="en"?"Contact":"Contacto"}
+                        text={language==="en"?"Contact":"Contacto"}
                         href="#contact"
                         Icon={MessageIcon}
                         isCurrent={currentSection===3}

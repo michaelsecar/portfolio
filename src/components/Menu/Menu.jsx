@@ -1,11 +1,18 @@
-import { CloseIcon } from '../../icons/Close'
-import { MenuItem } from './MenuItem'
-import { Sun } from '../../icons/Sun'
-import { Moon } from '../../icons/Moon'
-import { LanguageDropDown } from './Dropdown'
+import { useContext } from 'react'
 
-export const Menu = ({menuCallback, theme, themeCallback, language, languageCallback}) => {
-    const lang = localStorage.getItem('language')
+import { MenuItem } from './MenuItem'
+import { LanguageDropDown } from './Dropdown'
+import { CloseIcon, Sun, Moon } from '../../icons/Icons'
+
+import { MenuContext } from '../../providers/MenuProvider'
+import { ThemeContext } from '../../providers/ThemeProvider'
+import { LanguageContext } from '../../providers/LanguageProvider'
+
+export const Menu = () => {
+    const {theme, toggleTheme} = useContext(ThemeContext)
+    const {language, setLanguage}  = useContext(LanguageContext)
+
+    const menu = useContext(MenuContext)
 
     return (
         <div className="fixed min-w-[300px] h-screen
@@ -16,17 +23,17 @@ export const Menu = ({menuCallback, theme, themeCallback, language, languageCall
         ">
             <div className='w-full'>
                 <div>
-                    <button className="absolute right-3 top-3" onClick={()=>menuCallback()}>
+                    <button className="absolute right-3 top-3" onClick={menu.toggle}>
                         <CloseIcon/>
                     </button>
                 </div>
                 <div className="flex flex-col gap-5">
                     <MenuItem
-                        item={lang==="en"?"Theme":"Tema"}
-                        Icon={theme==='light'?Sun:Moon} callback={themeCallback}/>
+                        item={language==="en"?"Theme":"Tema"}
+                        Icon={theme?Sun:Moon} callback={toggleTheme}/>
                     <LanguageDropDown
                         currentLanguage={language}
-                        onChange={languageCallback}
+                        onChange={setLanguage}
                     />
                 </div>
             </div>

@@ -1,25 +1,27 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+
 import { MenuItem } from './MenuItem'
-import { SpainIcon, UnitedStatesIcon} from '../../icons/Language'
+import { useToggle } from '../../hooks/useToggle'
+import { SpainIcon, UnitedStatesIcon} from '../../icons/Icons'
 
-export const LanguageDropDown =  ({currentLanguage, onChange=undefined}) => {
-    const [open, setOpen] = useState(false)
+import { LanguageContext } from '../../providers/LanguageProvider'
+import { DropdownItem } from './DropdownItem'
 
-    const handleSelect = (item) => {
-        setOpen(false)
-        onChange(item)
-    }
+export const LanguageDropDown =  () => {
+    const [open, toggle] = useToggle()
+    const { language, setLanguage } = useContext(LanguageContext)
     
     return (
         <div className="relative">
-            <MenuItem item={currentLanguage==='en'?"English":"Español"} Icon={currentLanguage==='es'?SpainIcon:UnitedStatesIcon} callback={()=>setOpen(!open)}/>
+            <MenuItem item={language==='en'?"English":"Español"} Icon={language==='es'?SpainIcon:UnitedStatesIcon}
+            callback={toggle}/>
             {
                 open &&
                 <div className='p-2 border-2 absolute w-full flex flex-col gap-3 rounded-md mt-1
                  border-gray-400
                 '>
-                    <MenuItem item="Español" Icon={SpainIcon} callback={()=>handleSelect("es")}/>
-                    <MenuItem item="English" Icon={UnitedStatesIcon} callback={()=>handleSelect("en")}/>
+                    <DropdownItem item="Español" Icon={SpainIcon} callback={()=>setLanguage("es")}/>
+                    <DropdownItem item="English" Icon={UnitedStatesIcon} callback={()=>setLanguage("en")}/>
                 </div>
             }
        </div>

@@ -1,8 +1,11 @@
+import { useContext } from 'react'
 import { CVIcon, GitHubIcon, LinkedInIcon} from '../../icons/Icons'
 import { Anchor } from '../Utils/Anchor'
+import { LanguageContext } from '../../providers/LanguageProvider'
 
 export const Home = () => {
-    const lang = localStorage.getItem('language')
+    const { language } = useContext(LanguageContext)
+
     return (
         <div className="h-screen flex flex-col container justify-center">
             <div className="container max-w-6xl">
@@ -12,24 +15,24 @@ export const Home = () => {
                         <span className="text-3xl sm:text-4xl dark:text-gray-200 text-gray-800">Michael Secarlos</span>
                     </h1>
                     <h2 className="text-4xl sm:text-5xl dark:text-green-400 text-green-500">
-                        {lang==="en"?"Fullstack Developer":"Desarrollador Fullstack"}
+                        {language==="en"?"Fullstack Developer":"Desarrollador Fullstack"}
                     </h2>
                 </div>
                 <p className="md:text-lg py-5">
                     {
-                        lang==="en"?
+                        language==="en"?
                         "Graduated in Systems Engineering from the National University of San Agustin. With knowledge in ":
                         "Egresado de la carrera de Ingenieria de Sistemas de la Universidad Nacional de San Agustín de Arequipa. Con conocimientos en desarrollo"
                     }
                     <span className='dark:text-green-400 text-green-500 font-bold'> frontend</span> 
                     {
-                        lang==="en"?
+                        language==="en"?
                         " and ":
                         " y "
                     }
                     <span className='dark:text-green-400 text-green-500 font-bold'>backend</span>
                     {
-                        lang==="en"?
+                        language==="en"?
                         " developement. Also experience in different programming languages, databases and web frameworks.":
                         ". Asi como tambien en distintos lenguajes de programación, bases de datos y frameworks web."
                     }

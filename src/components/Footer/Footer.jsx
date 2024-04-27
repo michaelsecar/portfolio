@@ -1,16 +1,18 @@
+import { useContext } from 'react'
 import { MailIcon, GitHubIcon, LinkedInIcon } from '../../icons/Icons'
+import { LanguageContext } from '../../providers/LanguageProvider'
 
 export const Footer = () => {
-    const lang = localStorage.getItem('language')
+    const { language }= useContext(LanguageContext)
     return (
         <div className="container flex h-48 mt-24 sm:justify-between justify-normal gap-5">
             <div className="flex w-7/12 flex-col">
                 <h3 className="dark:text-green-400 text-green-600 font-bold text-2xl">
-                    {lang==="en"?"Portfolio":"Portafolio"}
+                    {language==="en"?"Portfolio":"Portafolio"}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 py-5 text-xs md:text-sm">
                     {
-                        lang==="en"?
+                        language==="en"?
                         "This portfolio has the goal to share my professional profile and showcase my progress, experience and knowledge in software development.":
                         "Este portfolio tiene como fin dar a conocer mi perfil profesional y evidenciar mis avances, experiencia y conocimientos en el desarrollo de software."
                     }
@@ -19,7 +21,7 @@ export const Footer = () => {
 
             <div className="flex w-2/12 flex-col [&>ul>li>a]:text-green-400">
                 <h2 className="font-bold text-2xl dark:text-gray-200 text-gray-500">
-                    {lang==="en"?"Contact":"Contacto"}
+                    {language==="en"?"Contact":"Contacto"}
                 </h2>
                 <ul>
                     <li className='flex'>
