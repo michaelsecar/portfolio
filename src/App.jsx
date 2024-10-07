@@ -1,7 +1,14 @@
 import "./App.css";
+import { Hero } from "./pages/Home/Hero";
+import { Projects } from "./pages/Home/Projects";
 
 function App() {
-  return <h1 className="text-2xl font-semibold">Hello world!</h1>;
+  return (
+    <div>
+      <Hero />
+      <Projects />
+    </div>
+  );
 }
 
 export default App;
