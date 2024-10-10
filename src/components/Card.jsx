@@ -1,7 +1,7 @@
 export const CardContainer = ({ children }) => {
   return (
     <div
-      className="max-w-72 rounded-md bg-white shadow-md 
+      className="max-w-72 rounded-md bg-dark shadow-md 
     hover:scale-105 duration-200"
     >
       {children}

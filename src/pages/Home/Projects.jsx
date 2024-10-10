@@ -1,7 +1,7 @@
 import { Paper } from "../../components/Paper";
 import { IconButton } from "../../components/IconButton";
 import { LeftArrow, RightArrow } from "../../icons/Arrows";
-import { H1 } from "../../components/Headings";
+import { H2 } from "../../components/Headings";
 import {
   CardBody,
   CardContainer,
@@ -37,14 +37,14 @@ export const Projects = () => {
     <div className="">
       <Paper>
         <div className="flex justify-between items-center">
-          <H1>Mis proyectos</H1>
+          <H2>Mis proyectos</H2>
         </div>
         <div>
           <div>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
             architecto sequi perspiciatis.
           </div>
-          <div className="py-4 px-12 bg-[#ccc] flex gap-4 justify-center">
+          <div className="py-4 px-12 flex gap-4 justify-center">
             <IconButton icon={<LeftArrow />} isDisabled />
             {projects.map((element, index) => {
               return (

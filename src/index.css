@@ -9,3 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background: radial-gradient(#863435,#313855);
+}
+

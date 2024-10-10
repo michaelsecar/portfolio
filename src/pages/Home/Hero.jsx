@@ -14,7 +14,7 @@ export const Hero = () => {
           <div>
             <H1>
               Michael Secarlos{" "}
-              <span className="text-lg block">Apaza Calsin</span>
+              <span className="text-2xl block">Apaza Calsin</span>
             </H1>
             <H2>Software developer</H2>
           </div>

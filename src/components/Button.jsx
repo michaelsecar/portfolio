@@ -1,10 +1,11 @@
-export const Button = ({ children, icon, isDisabled = false }) => {
-  const variantStyle = isDisabled ? "" : "hover:bg-dark hover:text-light";
+export const Button = ({ children, icon, isDisabled = false, props }) => {
+  const variantStyle = isDisabled ? "" : "hover:bg-primary hover:text-dark";
   return (
     <button
+      {...props}
       disabled={isDisabled}
-      className={`flex py-2 px-4 border border-dark rounded-md min-w-32 
-        items-center justify-center  bg-white duration-200 
+      className={`flex p-2 rounded-lg min-w-32  border-primary text-primary border
+        items-center justify-center duration-200 
         ${variantStyle}
       `}
     >
