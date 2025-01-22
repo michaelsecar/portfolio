@@ -11,7 +11,7 @@ const SideItem = ({ Icon, action }) => {
 
 export const Sidebar = () => {
   return (
-    <ul className="flex flex-col justify-center items-center h-full gap-5 hover:bg-opacity-100 bg-opacity-80">
+    <ul className="flex flex-col justify-center items-center h-full gap-5 bg-opacity-80">
       <li>
         <SideItem Icon={<ProfileIcon />} />
       </li>

@@ -21,10 +21,10 @@ export const Hero = () => {
           <div>
             <ul className="flex gap-2">
               <li>
-                <Button icon={<DownloadIcon />}>CV</Button>
+                <Button text="CV" icon={<PaperIcon />}/>
               </li>
               <li>
-                <Button icon={<PaperIcon />}>Mis proyectos</Button>
+                <Button text="Proyectos" icon={<PaperIcon />}/>
               </li>
               <li>
                 <IconButton icon={<SunIcon />} />

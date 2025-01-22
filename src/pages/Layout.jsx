@@ -1,12 +1,17 @@
+import { div } from "framer-motion/client";
 import { Sidebar } from "../components/Sidebar";
 
 export const Layout = ({ children }) => {
   return (
-    <div className="flex p-10 gap-6">
-      <div className="w-16 sticky top-1/2 -translate-y-1/2 rounded-lg bg-dark h-96 hover:bg-opacity-100 bg-opacity-80 duration-200">
-        <Sidebar />
+    <div className="flex">
+      <div className="h-screen sticky top-0 p-5">
+        <div className="w-16 rounded-lg bg-dark bg-opacity-80 duration-200 h-full">
+          <Sidebar />
+        </div>
       </div>
-      <div className="flex flex-col gap-6 w-fit">{children}</div>
+      <div className="flex py-5">
+        <div className="flex flex-col gap-6 w-fit">{children}</div>
+      </div>
     </div>
   );
 };

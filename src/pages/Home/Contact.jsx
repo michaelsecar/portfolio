@@ -51,7 +51,7 @@ export const Contact = () => {
                     hidden
                     value="michaelsecar@gmail.com"
                   />
-                  <Button type="submit">Enviar</Button>
+                  <Button type="submit" text="Enviar"/>
                 </div>
               </form>
             </div>
