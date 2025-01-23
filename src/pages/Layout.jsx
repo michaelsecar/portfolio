@@ -9,8 +9,8 @@ export const Layout = ({ children }) => {
           <Sidebar />
         </div>
       </div>
-      <div className="flex py-5">
-        <div className="flex flex-col gap-6 w-fit">{children}</div>
+      <div className="p-5">
+        <div className="flex flex-col gap-6">{children}</div>
       </div>
     </div>
   );
