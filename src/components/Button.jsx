@@ -4,7 +4,7 @@ export const Button = ({ text, icon, isDisabled = false, props }) => {
     <button
       {...props}
       disabled={isDisabled}
-      className={`flex p-2 rounded-lg min-w-32 border-primary text-primary border gap-2
+      className={`flex p-2 rounded-lg min-w-32 border-primary text-primary border gap-2 font-semibold
         items-center justify-center duration-200 
         ${variantStyle}
       `}

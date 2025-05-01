@@ -1,9 +1,10 @@
-import { div } from "framer-motion/client";
 import { Sidebar } from "../components/Sidebar";
+import { CanvasBackground } from "../components/CanvasBackground";
 
 export const Layout = ({ children }) => {
   return (
     <div className="flex">
+      <CanvasBackground />
       <div className="h-screen sticky top-0 p-5">
         <div className="w-16 rounded-lg bg-dark bg-opacity-80 duration-200 h-full">
           <Sidebar />

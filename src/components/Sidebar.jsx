@@ -1,5 +1,7 @@
 import { DownloadIcon } from "../icons/DownloadIcon";
 import { ProfileIcon } from "../icons/ProfileIcon";
+import { HammerIcon } from "../icons/HammerIcon";
+import { PaperIcon } from "../icons/PaperIcon";
 
 const SideItem = ({ Icon, action }) => {
   return (
@@ -11,15 +13,15 @@ const SideItem = ({ Icon, action }) => {
 
 export const Sidebar = () => {
   return (
-    <ul className="flex flex-col justify-center items-center h-full gap-5 bg-opacity-80">
+    <ul className="flex flex-col justify-center items-center h-full gap-5 bg-opacity-80 border border-primary rounded-lg">
       <li>
         <SideItem Icon={<ProfileIcon />} />
       </li>
       <li>
-        <SideItem Icon={<DownloadIcon />} />
+        <SideItem Icon={<HammerIcon />} />
       </li>
       <li>
-        <SideItem Icon={<DownloadIcon />} />
+        <SideItem Icon={<PaperIcon />} />
       </li>
       <li>
         <SideItem Icon={<DownloadIcon />} />

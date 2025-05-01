@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { Button } from "../../components/Button";
 import { H1, H2 } from "../../components/Headings";
 import { IconButton } from "../../components/IconButton";
 import { Paper } from "../../components/Paper";
 import { DownloadIcon } from "../../icons/DownloadIcon";
 import { PaperIcon } from "../../icons/PaperIcon";
+import { SettingsIcon } from "../../icons/SettingsIcon";
 import { SunIcon } from "../../icons/SunIcon";
+import { SettingsPopUp } from "./components/SettingsPopUp";
 
 export const Hero = () => {
+  const [isSettingsPopUpOpen, setIsSettingsPopUpOpen] = useState(false);
+
   return (
     <div className="">
       <Paper>
@@ -21,13 +26,23 @@ export const Hero = () => {
           <div>
             <ul className="flex gap-2">
               <li>
-                <Button text="CV" icon={<PaperIcon />}/>
+                <Button text="CV" icon={<PaperIcon />} />
               </li>
               <li>
-                <Button text="Proyectos" icon={<PaperIcon />}/>
+                <Button text="Proyectos" icon={<PaperIcon />} />
               </li>
               <li>
-                <IconButton icon={<SunIcon />} />
+                <IconButton onClick={() => {}} icon={<SunIcon />} />
+              </li>
+              <li>
+                <IconButton
+                  onClick={() => setIsSettingsPopUpOpen(true)}
+                  icon={<SettingsIcon />}
+                />
+                <SettingsPopUp
+                  isOpen={isSettingsPopUpOpen}
+                  onClose={() => setIsSettingsPopUpOpen(false)}
+                />
               </li>
             </ul>
           </div>

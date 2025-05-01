@@ -35,23 +35,23 @@ export const Contact = () => {
                 <div className="grid grid-cols-1 gap-2">
                   <div className="flex justify-between">
                     <label htmlFor="asunto">Asunto</label>
-                    <TextInput id="asunto" name="su" />
+                    <TextInput id="asunto" name="su" onChange={() => {}} />
                   </div>
                   <div>
                     <div className="flex justify-between">
                       <label htmlFor="mensaje">Mensaje</label>
-                      <TextInput id="mensaje" name="body" />
+                      <TextInput id="mensaje" name="body" onChange={() => {}} />
                     </div>
                   </div>
-                  <input type="text" name="view" hidden value="cm" />
-                  <input type="text" name="fs" hidden value="1" />
+                  <input type="text" name="view" hidden defaultValue="cm" />
+                  <input type="text" name="fs" hidden defaultValue="1" />
                   <input
                     type="text"
                     name="to"
                     hidden
-                    value="michaelsecar@gmail.com"
+                    defaultValue="michaelsecar@gmail.com"
                   />
-                  <Button type="submit" text="Enviar"/>
+                  <Button type="submit" text="Enviar" />
                 </div>
               </form>
             </div>
