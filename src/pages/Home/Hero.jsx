@@ -32,9 +32,6 @@ export const Hero = () => {
                 <Button text="Proyectos" icon={<PaperIcon />} />
               </li>
               <li>
-                <IconButton onClick={() => {}} icon={<SunIcon />} />
-              </li>
-              <li>
                 <IconButton
                   onClick={() => setIsSettingsPopUpOpen(true)}
                   icon={<SettingsIcon />}

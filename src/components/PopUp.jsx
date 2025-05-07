@@ -1,6 +1,4 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { IconButton } from "./IconButton";
-import { ExitIcon } from "../icons/ExitIcon";
 
 export const PopUp = ({ children, isOpen, onClose }) => {
   return (

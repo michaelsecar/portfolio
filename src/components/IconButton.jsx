@@ -1,10 +1,10 @@
 export const IconButton = ({ onClick, icon, isDisabled = false }) => {
-  const variantStyle = isDisabled ? "" : "hover:bg-primary hover:text-dark";
+  const variantStyle = isDisabled ? "" : "hover:bg-secondary";
   return (
     <button
       onClick={onClick}
       disabled={isDisabled}
-      className={`px-4 py-2 duration-200 rounded-md border border-primary text-primary
+      className={`p-2 duration-200 rounded-full border border-primary text-dark bg-primary
          ${variantStyle}`}
     >
       {icon}
