@@ -44,8 +44,8 @@ export const Projects = () => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
             architecto sequi perspiciatis.
           </div>
-          <div className="py-4 px-12 flex gap-4 justify-center">
-            <IconButton icon={<LeftArrow />} isDisabled />
+          <div className="py-4 px-12 flex gap-4 justify-center items-center">
+            <IconButton icon={<LeftArrow />} />
             {projects.map((element, index) => {
               return (
                 <CardContainer key={index}>
@@ -55,7 +55,7 @@ export const Projects = () => {
                 </CardContainer>
               );
             })}
-            <IconButton icon={<RightArrow />} isDisabled={true} />
+            <IconButton icon={<RightArrow />} />
           </div>
         </div>
       </Paper>

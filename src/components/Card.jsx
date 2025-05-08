@@ -1,11 +1,15 @@
+import { motion } from "framer-motion";
+
 export const CardContainer = ({ children }) => {
   return (
-    <div
-      className="max-w-72 rounded-md bg-dark shadow-md 
-    hover:scale-105 duration-200"
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="max-w-72 rounded-md bg-dark shadow-md"
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
