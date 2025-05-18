@@ -3,6 +3,7 @@ import { IconButton } from "../../components/IconButton";
 import { LeftArrow, RightArrow } from "../../icons/Arrows";
 import { H2 } from "../../components/Headings";
 import {
+  Card,
   CardBody,
   CardContainer,
   CardHeader,
@@ -44,18 +45,17 @@ export const Projects = () => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
             architecto sequi perspiciatis.
           </div>
-          <div className="py-4 px-12 flex gap-4 justify-center items-center">
-            <IconButton icon={<LeftArrow />} />
+          <div className="p-4 grid grid-cols-3 justify-center items-center">
             {projects.map((element, index) => {
               return (
-                <CardContainer key={index}>
-                  <CardHeader>{element.title}</CardHeader>
-                  <CardImage image={element.image} />
-                  <CardBody>{element.description}</CardBody>
-                </CardContainer>
+                <Card
+                  key={index}
+                  title={element.title}
+                  image={element.image}
+                  description={element.description}
+                />
               );
             })}
-            <IconButton icon={<RightArrow />} />
           </div>
         </div>
       </Paper>

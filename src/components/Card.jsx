@@ -1,12 +1,23 @@
 import { motion } from "framer-motion";
 
+export const Card = ({ title, image, description }) => {
+  return (
+    <CardContainer>
+      <CardHeader>{title}</CardHeader>
+      <CardImage image={image}>
+        <CardBody>{description}</CardBody>
+      </CardImage>
+    </CardContainer>
+  );
+};
+
 export const CardContainer = ({ children }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="max-w-72 rounded-md bg-dark shadow-md"
+      className="bg-dark shadow-md"
     >
       {children}
     </motion.div>
@@ -23,9 +34,11 @@ export const CardImage = ({ children, image }) => {
 };
 
 export const CardHeader = ({ children }) => {
-  return <div className="p-2 font-semibold">{children}</div>;
+  return (
+    <div className="p-2 text-center font-semibold text-xl">{children}</div>
+  );
 };
 
 export const CardBody = ({ children }) => {
-  return <div className="p-2 text-sm">{children}</div>;
+  return <div className="text-sm">{children}</div>;
 };

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export const Paper = ({ children }) => {
   return (
     <motion.div
-      className="h-screen"
+      className=""
       transition={{ duration: 0.5 }}
       initial={{
         opacity: 0,
