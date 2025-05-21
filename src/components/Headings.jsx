@@ -8,7 +8,7 @@ export const H1 = ({ children }) => {
 
 export const H2 = ({ children }) => {
   return (
-    <h2 className="text-3xl font-mono font-semibold text-secondary">
+    <h2 className="text-5xl font-mono font-semibold text-secondary">
       {children}
     </h2>
   );

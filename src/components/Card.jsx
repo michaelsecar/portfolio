@@ -11,20 +11,21 @@ export const Card = ({ title, image, description }) => {
   );
 };
 
-export const CardContainer = ({ children }) => {
+const CardContainer = ({ children }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 0.7 }}
       exit={{ opacity: 0 }}
-      className="bg-dark shadow-md"
+      whileHover={{ opacity: 1 }}
+      className="bg-black"
     >
       {children}
     </motion.div>
   );
 };
 
-export const CardImage = ({ children, image }) => {
+const CardImage = ({ children, image }) => {
   return (
     <div>
       <img src={image} alt="Imagen del proyecto" />
@@ -33,12 +34,12 @@ export const CardImage = ({ children, image }) => {
   );
 };
 
-export const CardHeader = ({ children }) => {
+const CardHeader = ({ children }) => {
   return (
     <div className="p-2 text-center font-semibold text-xl">{children}</div>
   );
 };
 
-export const CardBody = ({ children }) => {
-  return <div className="text-sm">{children}</div>;
+const CardBody = ({ children }) => {
+  return <div className="text-sm p-2">{children}</div>;
 };
