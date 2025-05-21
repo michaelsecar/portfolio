@@ -1,14 +1,6 @@
 import { Paper } from "../../components/Paper";
-import { IconButton } from "../../components/IconButton";
-import { LeftArrow, RightArrow } from "../../icons/Arrows";
 import { H2 } from "../../components/Headings";
-import {
-  Card,
-  CardBody,
-  CardContainer,
-  CardHeader,
-  CardImage,
-} from "../../components/Card";
+import { Card } from "../../components/Card";
 import ReichImage from "/reich.png";
 import ChatRSS from "/chatrss.png";
 import Enverb from "/enverb.png";

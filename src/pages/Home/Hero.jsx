@@ -3,10 +3,8 @@ import { Button } from "../../components/Button";
 import { H1, H2 } from "../../components/Headings";
 import { IconButton } from "../../components/IconButton";
 import { Paper } from "../../components/Paper";
-import { DownloadIcon } from "../../icons/DownloadIcon";
 import { PaperIcon } from "../../icons/PaperIcon";
 import { SettingsIcon } from "../../icons/SettingsIcon";
-import { SunIcon } from "../../icons/SunIcon";
 import { SettingsPopUp } from "./components/SettingsPopUp";
 
 export const Hero = () => {

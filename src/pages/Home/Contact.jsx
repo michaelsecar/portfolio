@@ -1,11 +1,7 @@
 import { Button } from "../../components/Button";
-import { H1, H2, H3 } from "../../components/Headings";
-import { IconButton } from "../../components/IconButton";
+import { H2, H3 } from "../../components/Headings";
 import { TextInput } from "../../components/Input";
 import { Paper } from "../../components/Paper";
-import { DownloadIcon } from "../../icons/DownloadIcon";
-import { PaperIcon } from "../../icons/PaperIcon";
-import { SunIcon } from "../../icons/SunIcon";
 
 export const Contact = () => {
   return (
