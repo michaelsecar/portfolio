@@ -1,4 +1,4 @@
-export const Button = ({ text, icon, isDisabled = false, props }) => {
+export const Button = ({ text, icon, isDisabled = false, ...props }) => {
   const variantStyle = isDisabled ? "" : "hover:bg-secondary";
   return (
     <button

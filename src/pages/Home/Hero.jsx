@@ -24,7 +24,16 @@ export const Hero = () => {
         <div>
           <ul className="flex gap-2">
             <li>
-              <Button text="CV" icon={<PaperIcon />} />
+              <Button
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "CV.pdf";
+                  link.download = "CV.pdf";
+                  link.click();
+                }}
+                text="CV"
+                icon={<PaperIcon />}
+              />
             </li>
             <li>
               <Button text="Proyectos" icon={<PaperIcon />} />
