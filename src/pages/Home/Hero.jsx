@@ -6,6 +6,7 @@ import { Paper } from "../../components/Paper";
 import { PaperIcon } from "../../icons/PaperIcon";
 import { SettingsIcon } from "../../icons/SettingsIcon";
 import { SettingsPopUp } from "./components/SettingsPopUp";
+import { Github } from "../../icons/Github";
 
 export const Hero = () => {
   const [isSettingsPopUpOpen, setIsSettingsPopUpOpen] = useState(false);
@@ -37,6 +38,15 @@ export const Hero = () => {
                 isOpen={isSettingsPopUpOpen}
                 onClose={() => setIsSettingsPopUpOpen(false)}
               />
+            </li>
+            <li>
+              <a
+                href="https://github.com/michaelsecar"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconButton icon={<Github />} />
+              </a>
             </li>
           </ul>
         </div>
