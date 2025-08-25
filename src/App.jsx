@@ -5,10 +5,7 @@ import { Contact } from "./components/Contact/Contact";
 import { Footer } from "./components/Footer/Footer";
 import { Stack } from "./components/Stack/Stack";
 
-import { ThemeContextProvider } from "./providers/ThemeProvider";
-import { LanguageContextProvider } from "./providers/LanguageProvider";
 import { MenuContextProvider } from "./providers/MenuProvider";
-import { SectionContextProvider } from "./providers/SectionProvider";
 import { AppProvider } from "./AppProvider";
 
 function App() {

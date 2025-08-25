@@ -1,3 +1,4 @@
+import { LanguageContextProvider } from "./providers/LanguageProvider";
 import { SectionContextProvider } from "./providers/SectionProvider";
 import { ThemeContextProvider } from "./providers/ThemeProvider";
 
