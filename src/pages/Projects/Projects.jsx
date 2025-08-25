@@ -1,5 +1,5 @@
 import { GridElement } from "./GridElement";
-import { Title } from "../Utils/Title";
+import { Title } from "../../components/Title";
 import { useState, useEffect, useContext } from "react";
 import { getProjects } from "../../services/Projects.service";
 import { LanguageContext } from "../../providers/LanguageProvider";

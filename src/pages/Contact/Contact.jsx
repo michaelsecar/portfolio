@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { Anchor } from "../Utils/Anchor";
-import { Title } from "../Utils/Title";
-import { TextInput } from "../Utils/TextInput";
+import { Anchor } from "../../components/Anchor";
+import { Title } from "../../components/Title";
+import { TextInput } from "../../components/TextInput";
 import { MailIcon } from "../../icons/Icons";
 import { Copy2Clipboard } from "../../icons/Icons";
 import { LanguageContext } from "../../providers/LanguageProvider";

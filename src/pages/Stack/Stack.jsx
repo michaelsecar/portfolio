@@ -10,7 +10,7 @@ import {
   PythonIcon,
   ReactIcon,
 } from "../../icons/StackIcons";
-import { Title } from "../Utils/Title";
+import { Title } from "../../components/Title";
 import { StackItem } from "./StackItem";
 import { LanguageContext } from "../../providers/LanguageProvider";
 

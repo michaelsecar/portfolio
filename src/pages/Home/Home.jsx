@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CVIcon, GitHubIcon, LinkedInIcon } from "../../icons/Icons";
-import { Anchor } from "../Utils/Anchor";
+import { Anchor } from "../../components/Anchor";
 import { LanguageContext } from "../../providers/LanguageProvider";
 
 export const Home = () => {

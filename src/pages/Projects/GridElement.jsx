@@ -1,4 +1,4 @@
-import { Chip } from "../Utils/Chip";
+import { Chip } from "../../components/Chip";
 import { GitIcon } from "../../icons/Icons";
 
 export const GridElement = ({
