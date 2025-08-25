@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 export const useToggle = (initialState=false) => {
-    const [on, setState] = useState(initialState)
+    const [value, setValue] = useState(initialState)
     const toggle = () => {
-        setState(!on)
+        setValue(!value)
     }
-    return [on, toggle]
+    return [value, toggle]
 }
