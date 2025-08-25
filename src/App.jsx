@@ -1,9 +1,9 @@
-import { Header } from "./components/Header/Header";
-import { Home } from "./components/Home/Home";
-import { Projects } from "./components/Projects/Projects";
-import { Contact } from "./components/Contact/Contact";
-import { Footer } from "./components/Footer/Footer";
-import { Stack } from "./components/Stack/Stack";
+import { Header } from "./pages/Header/Header";
+import { Home } from "./pages/Home/Home";
+import { Projects } from "./pages/Projects/Projects";
+import { Contact } from "./pages/Contact/Contact";
+import { Footer } from "./pages/Footer/Footer";
+import { Stack } from "./pages/Stack/Stack";
 
 import { MenuContextProvider } from "./providers/MenuProvider";
 import { AppProvider } from "./AppProvider";
