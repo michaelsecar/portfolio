@@ -5,6 +5,7 @@ import { TextInput } from "../../components/TextInput";
 import { MailIcon } from "../../icons/Icons";
 import { Copy2Clipboard } from "../../icons/Icons";
 import { LanguageContext } from "../../providers/LanguageProvider";
+import { motion } from "motion/react";
 
 export const Contact = () => {
   const { language } = useContext(LanguageContext);
@@ -21,7 +22,11 @@ export const Contact = () => {
   };
 
   return (
-    <div className="container h-fit pt-8">
+    <motion.div
+      className="container h-fit pt-8"
+      initial={{ opacity: 0, y: -10 }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+    >
       <Title
         title={language === "en" ? "Contact" : "Contacto"}
         description={
@@ -99,6 +104,6 @@ export const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

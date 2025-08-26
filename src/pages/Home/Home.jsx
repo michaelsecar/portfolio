@@ -2,12 +2,17 @@ import { useContext } from "react";
 import { CVIcon, GitHubIcon, LinkedInIcon } from "../../icons/Icons";
 import { Anchor } from "../../components/Anchor";
 import { LanguageContext } from "../../providers/LanguageProvider";
+import { motion } from "framer-motion";
 
 export const Home = () => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div className="h-screen flex flex-col container justify-center">
+    <motion.div
+      className="h-screen flex flex-col container justify-center"
+      initial={{ opacity: 0, y: -10 }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+    >
       <div className="container max-w-6xl">
         <div className="font-bold">
           <h1>
@@ -58,6 +63,6 @@ export const Home = () => {
           <Anchor text="Curriculum" href="/CV.pdf" download="" Icon={CVIcon} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -3,6 +3,7 @@ import { Title } from "../../components/Title";
 import { useState, useEffect, useContext } from "react";
 import { getProjects } from "../../services/Projects.service";
 import { LanguageContext } from "../../providers/LanguageProvider";
+import { motion } from "motion/react";
 
 export const Projects = () => {
   const { language } = useContext(LanguageContext);
@@ -16,7 +17,11 @@ export const Projects = () => {
   }, []);
 
   return (
-    <div className="h-fit container pt-8">
+    <motion.div
+      className="h-fit container pt-8"
+      initial={{ opacity: 0, y: -10 }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+    >
       <Title
         title={language === "en" ? "Projects" : "Proyectos"}
         description={
@@ -42,6 +47,6 @@ export const Projects = () => {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

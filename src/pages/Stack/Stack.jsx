@@ -13,6 +13,7 @@ import {
 import { Title } from "../../components/Title";
 import { StackItem } from "./StackItem";
 import { LanguageContext } from "../../providers/LanguageProvider";
+import { motion } from "motion/react";
 
 export const Stack = () => {
   const { language } = useContext(LanguageContext);
@@ -30,7 +31,11 @@ export const Stack = () => {
   ];
 
   return (
-    <div className="container h-fit pt-8">
+    <motion.div
+      className="container h-fit pt-8"
+      initial={{ opacity: 0, y: -10 }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+    >
       <Title
         title="Stack"
         description={
@@ -44,6 +49,6 @@ export const Stack = () => {
           return <StackItem key={i} item={e.name} Icon={e.icon} />;
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
