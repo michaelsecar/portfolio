@@ -40,7 +40,7 @@ export const Navbar = () => {
         <li>
           <NavItem
             text={language === "en" ? "Experience" : "Experiencia"}
-            href="#projects"
+            href="#experience"
             Icon={HammerIcon}
             isCurrent={currentSection === 1}
           />
