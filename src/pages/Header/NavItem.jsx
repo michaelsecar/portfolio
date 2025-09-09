@@ -8,7 +8,7 @@ export const NavItem = ({
     <a
       href={href}
       className={`
-                text-md p-4 gap-2 border-b-2 border-transparent duration-100 w-20 md:w-32
+                text-md p-4 gap-2 border-b-2 border-transparent duration-100 w-20 lg:w-40 h-12
                 flex items-center justify-center 
                 dark:text-gray-200 
                 ${
@@ -18,7 +18,7 @@ export const NavItem = ({
                 }`}
     >
       {Icon ? <Icon /> : <></>}
-      <span className="md:inline hidden">{text}</span>
+      <span className="hidden lg:block">{text}</span>
     </a>
   );
 };
