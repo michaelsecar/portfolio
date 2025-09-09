@@ -5,7 +5,7 @@ import { LanguageDropDown } from "./Dropdown";
 import { CloseIcon, Sun, Moon } from "../../icons/Icons";
 
 import { MenuContext } from "../../providers/MenuProvider";
-import { ThemeContext } from "../../providers/ThemeProvider";
+import { ThemeContext } from "../../providers/contexts/ThemeContext";
 import { LanguageContext } from "../../providers/LanguageProvider";
 import { motion } from "framer-motion";
 
