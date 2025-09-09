@@ -7,6 +7,7 @@ import { Stack } from "./pages/Stack/Stack";
 
 import { MenuContextProvider } from "./providers/MenuProvider";
 import { AppProvider } from "./AppProvider";
+import { Experience } from "./pages/Experience/Experience";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <main>
           <section id="home">
             <Home />
+          </section>
+          <section id="experience">
+            <Experience />
           </section>
           <section id="projects">
             <Projects />

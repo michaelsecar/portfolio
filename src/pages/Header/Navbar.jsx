@@ -5,6 +5,7 @@ import {
   MessageIcon,
   ProjectIcon,
   ToolsIcon,
+  HammerIcon,
 } from "../../icons/Icons";
 
 import { useContext } from "react";
@@ -21,8 +22,7 @@ export const Navbar = () => {
   return (
     <div
       className="fixed w-screen left-0 bg-opacity-80 backdrop-blur-lg z-10 bg-stone-100 dark:bg-black
-            flex items-center justify-between px-10
-        "
+            flex items-center justify-between px-10"
     >
       <button onClick={menu.toggle}>
         <MenuIcon />
@@ -39,10 +39,18 @@ export const Navbar = () => {
         </li>
         <li>
           <NavItem
+            text={language === "en" ? "Experience" : "Experiencia"}
+            href="#projects"
+            Icon={HammerIcon}
+            isCurrent={currentSection === 1}
+          />
+        </li>
+        <li>
+          <NavItem
             text={language === "en" ? "Projects" : "Proyectos"}
             href="#projects"
             Icon={ProjectIcon}
-            isCurrent={currentSection === 1}
+            isCurrent={currentSection === 2}
           />
         </li>
         <li>
@@ -50,7 +58,7 @@ export const Navbar = () => {
             text="Stack"
             href="#stack"
             Icon={ToolsIcon}
-            isCurrent={currentSection === 2}
+            isCurrent={currentSection === 3}
           />
         </li>
         <li>
@@ -58,11 +66,10 @@ export const Navbar = () => {
             text={language === "en" ? "Contact" : "Contacto"}
             href="#contact"
             Icon={MessageIcon}
-            isCurrent={currentSection === 3}
+            isCurrent={currentSection === 4}
           />
         </li>
       </ul>
-
       <div></div>
     </div>
   );
