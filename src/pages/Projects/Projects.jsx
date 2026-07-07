@@ -18,7 +18,7 @@ export const Projects = () => {
 
   return (
     <motion.div
-      className="h-fit container pt-8"
+      className="min-h-screen container pt-8"
       initial={{ opacity: 0, y: -10 }}
       whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
     >
@@ -30,7 +30,7 @@ export const Projects = () => {
             : "Mención de los proyectos en los que he trabajado anteriormente"
         }
       />
-      <div className="flex h-2/3">
+      <div className="flex">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-3 grid-cols-1">
           {projects.map((e, i) => {
             return (

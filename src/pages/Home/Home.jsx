@@ -24,15 +24,13 @@ export const Home = () => {
             </span>
           </h1>
           <h2 className="text-4xl sm:text-5xl dark:text-green-400 text-green-500">
-            {language === "en"
-              ? "Fullstack Developer"
-              : "Desarrollador Fullstack"}
+            {language === "en" ? "Fullstack Developer" : "Fullstack Developer"}
           </h2>
         </div>
         <p className="md:text-lg py-5">
           {language === "en"
-            ? "Graduated in Systems Engineering from the National University of San Agustin. With knowledge in "
-            : "Egresado de la carrera de Ingenieria de Sistemas de la Universidad Nacional de San Agustín de Arequipa. Con conocimientos en desarrollo"}
+            ? "Software Developer with 1 year of experience in"
+            : "Software Developer con 1 año de experiencia en "}
           <span className="dark:text-green-400 text-green-500 font-bold">
             {" "}
             frontend
@@ -42,8 +40,8 @@ export const Home = () => {
             backend
           </span>
           {language === "en"
-            ? " developement. Also experience in different programming languages, databases and web frameworks."
-            : ". Asi como tambien en distintos lenguajes de programación, bases de datos y frameworks web."}
+            ? " development. Experienced in mobile application development, SQL databases, and web frameworks"
+            : ". Conocimientos y experiencias aplicados en aplicaciones móviles, bases de datos SQL y frameworks web."}
         </p>
         <div className="sm:flex gap-2">
           <Anchor

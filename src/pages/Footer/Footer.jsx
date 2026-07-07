@@ -5,7 +5,7 @@ import { LanguageContext } from "../../providers/LanguageProvider";
 export const Footer = () => {
   const { language } = useContext(LanguageContext);
   return (
-    <div className="container flex h-48 mt-24 sm:justify-between justify-normal gap-5">
+    <div className="container flex h-48 mt-24 sm:justify-between justify-normal gap-5 ">
       <div className="flex w-7/12 flex-col">
         <h3 className="dark:text-green-400 text-green-600 font-bold text-2xl">
           {language === "en" ? "Portfolio" : "Portafolio"}
